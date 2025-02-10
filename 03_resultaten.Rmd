@@ -3,6 +3,7 @@
 ```{r}
 library(dplyr)
 library(simputation)
+library(tidyr)
 ```
 
 ```{r}
@@ -10,17 +11,26 @@ source("./source/functions/f.read_excel_allsheets.R")
 ```
 
 ```{r}
-vis<-f.read_excel_allsheets("./data/biotiek/vis/elektrisch/extern/verwerkt_in_excel/vis_elektrisch.xlsx")[[1]] %>%
+vis <- f.read_excel_allsheets("./data/biotiek/vis/elektrisch/extern/verwerkt_in_excel/vis_elektrisch.xlsx")[[1]] %>%
   filter(traject!="3+") %>%
   filter(aantal > 0) %>%
   mutate(traject = gsub("\\..*","",traject),
          vissoort = case_when(
             vissoort == "bermpjes" ~ "bermpje",
             vissoort == "Driedoornige stekelbaars" ~ "driedoornige stekelbaars",
+            vissoort %in% c("blanvoorn","blanvoorn (hybride?)") ~ "blankvoorn",
             TRUE ~ vissoort),
          lengte = as.numeric(lengte),
          gewicht = as.numeric(gewicht),
          gewicht.vol = gewicht
          ) %>%
-  impute_cart(gewicht.vol ~ lengte | vissoort)
+  impute_rlm(gewicht.vol ~ lengte | vissoort)
+
+vis.pop <- vis %>%
+  group_by(traject,vissoort) %>%
+  summarise(aantal=sum(aantal,na.rm=TRUE),
+            gewicht.vol=sum(gewicht.vol,na.rm=TRUE)) %>%
+  ungroup() %>%
+  complete(traject=c("3","4","5","6","7"),vissoort,fill=list(aantal=0,gewicht.vol=0))
+
 ```
