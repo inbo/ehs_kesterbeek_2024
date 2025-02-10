@@ -12,8 +12,8 @@ source("./source/functions/f.read_excel_allsheets.R")
 
 ```{r}
 vis <- f.read_excel_allsheets("./data/biotiek/vis/elektrisch/extern/verwerkt_in_excel/vis_elektrisch.xlsx")[[1]] %>%
-  filter(traject!="3+") %>%
-  filter(aantal > 0) %>%
+  dplyr::filter(traject!="3+") %>%
+  dplyr::filter(aantal > 0) %>%
   mutate(traject = gsub("\\..*","",traject),
          vissoort = case_when(
             vissoort == "bermpjes" ~ "bermpje",
