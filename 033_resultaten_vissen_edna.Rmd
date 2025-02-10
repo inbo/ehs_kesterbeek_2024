@@ -1,0 +1,13 @@
+# Resultaten eDNA vissen
+
+```{r}
+library(dplyr)
+library(simputation)
+library(tidyr)
+```
+
+```{r}
+source("./source/functions/f.read_excel_allsheets.R")
+```
+
+
