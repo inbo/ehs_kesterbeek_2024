@@ -9,5 +9,22 @@ library(tidyr)
 ```{r}
 source("./source/functions/f.read_excel_allsheets.R")
 ```
+# Inlezen van de datafiles
+edna_rra_avg <- read.delim("./ehs_kesterbeek_2024/data/biotiek/vis/elektrisch/extern/ruw/AquatischBeheerCuratedAveragedRRA_Hellinger.txt", 
+                           sep = "\t", header = TRUE, stringsAsFactors = FALSE)
 
+edna_rra <- read.delim("./ehs_kesterbeek_2024/data/biotiek/vis/elektrisch/extern/ruw/AquatischBeheerCuratedRRA_Hellinger.txt", 
+                       sep = "\t", header = TRUE, stringsAsFactors = FALSE)
 
+# Preview van de ingelezen data
+cat("Eerste rijen van edna_rra_avg:\n")
+print(head(edna_rra_avg))
+
+cat("\nStrucuur van edna_rra_avg:\n")
+str(edna_rra_avg)
+
+cat("\nEerste rijen van edna_rra:\n")
+print(head(edna_rra))
+
+cat("\nStrucuur van edna_rra:\n")
+str(edna_rra)
