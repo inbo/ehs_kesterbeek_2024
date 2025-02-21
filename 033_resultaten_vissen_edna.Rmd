@@ -9,6 +9,8 @@ library(tidyr)
 ```{r}
 source("./source/functions/f.read_excel_allsheets.R")
 ```
+# Ik zet hieronder tijdelijk wat code om uit te proberen in github, zodra tevreden zal ik de onnodige tussentitels verwijderen en lay-out 'resultaten_vissen' volgen
+
 # Inlezen van de datafiles
 edna_rra_avg <- read.delim("./ehs_kesterbeek_2024/data/biotiek/vis/elektrisch/extern/ruw/AquatischBeheerCuratedAveragedRRA_Hellinger.txt", 
                            sep = "\t", header = TRUE, stringsAsFactors = FALSE)
