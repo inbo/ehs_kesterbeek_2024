@@ -4,10 +4,17 @@
 library(dplyr)
 library(simputation)
 library(tidyr)
+library(ggplot2)
+library(ggpubr)
+library(knitr)
 ```
 
 ```{r}
 source("./source/functions/f.read_excel_allsheets.R")
+```
+
+```{r}
+theme.barplot <- theme_bw() + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1, size=15), axis.text.y = element_text(size=15), axis.title = element_text(size = 20), title = element_text(size = 30), strip.text = element_text(size=12), legend.title=element_blank())
 ```
 
 ```{r}
@@ -32,5 +39,58 @@ vis.pop <- vis %>%
             gewicht.vol=sum(gewicht.vol,na.rm=TRUE)) %>%
   ungroup() %>%
   complete(traject=c("3","4","5","6","7"),vissoort,fill=list(aantal=0,gewicht.vol=0))
+```
 
+```{r overzichtstabelaantal}
+vis.pop %>%
+  dplyr::select(-gewicht.vol) %>%
+  pivot_wider(names_from = traject, values_from = aantal) %>%
+  kable(caption="Aantal vissen per traject en vissoort")
+```
+
+```{r overzichtstabelgewicht}
+vis.pop %>%
+  dplyr::select(-aantal) %>%
+  mutate(gewicht.vol = round(gewicht.vol,1)) %>%
+  pivot_wider(names_from = traject, values_from = gewicht.vol) %>%
+  kable(caption="Totaal gewicht vissen (gram) per traject en vissoort")
+```
+
+```{r vis-barplot-absoluut, fig.cap ="Verdeling van de aantallen en totaal gewicht (g) per vissoort in de verschillende trajecten."}
+ggplot(data=vis.pop %>% pivot_longer(cols = where(is.numeric), names_to = "variable", values_to = "waarde"), aes(fill=vissoort, y=waarde, x=traject)) + geom_bar(position="stack", stat="identity") + facet_wrap(~variable,scales="free") + theme.barplot
+```
+
+```{r lengteverdeling, fig.cap="Lengteverdeling voor de verschillende gevangen soorten"}
+vis %>% 
+  dplyr::filter(vissoort!="blauwbandgrondel") %>%
+  ggplot(aes(x = lengte, fill=traject, colour=traject)) + 
+  geom_histogram(position = "dodge") + xlab("Vislengte (mm)") + ylab("Aantal") +
+  facet_wrap(~ vissoort, scales="free", labeller = label_wrap_gen(multi_line=FALSE)) + theme_bw()
+```
+
+```{r cumlengteverdeling, fig.cap="Cumulatieve lengteverdeling voor de verschillende gevangen soorten"}
+vis %>%
+  dplyr::filter(vissoort!="blauwbandgrondel") %>%
+  ggplot(aes(lengte,colour=traject)) + stat_ecdf(geom = "step") +
+facet_wrap(~vissoort, scales="free", labeller = label_wrap_gen(multi_line=FALSE)) + xlab("Vislengte (mm)") + ylab("Cumulatief aantal")  + theme_bw()
+```
+
+```{r lengteverdelingboxplot, fig.cap="Boxplots die de gemiddelde lengte voorstellen in functie van het traject. Gepaarde wilcoxon ranks sum testen met Bonferroni correctie werden gebruikt. p-waarden werden geclassificeerd als niet-significant of ns ($>$0.05), * (0.05-0.01), ** (0.01-0.001), *** (0.001-0.0001), **** (0.0001-0)."}
+
+cmprtraject<-list(c('3','4'), c('3','6'), c('4','6'))
+
+symnum.args <- list(cutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, Inf), symbols = c("****", "***", "**", "*", "ns"))
+
+ggplot(data=vis %>%
+         dplyr::filter(vissoort!="blauwbandgrondel"),
+       aes(traject, lengte),size = 0.5, color = "black") + geom_boxplot(linetype = 1, position = position_dodge(0.5)) + facet_wrap(~vissoort, scales="free_y", ncol=3, labeller = label_wrap_gen(multi_line=FALSE)) + ylab("Lengte (mm)") + xlab("Traject") + theme_bw() + theme(text = element_text(size = 12, family = "serif"), axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5, family = "serif"), strip.background = element_rect(colour = "black", fill = "white"), legend.position = "bottom") + stat_compare_means(comparisons = cmprtraject, method = "wilcox.test", symnum.args = symnum.args, p.adjust.method = "bonferroni", label='p.adj', vjust = 0.5) 
+```
+
+```{r}
+vis.pop %>% 
+  dplyr::filter(aantal!=0) %>% 
+  group_by(traject) %>% 
+  summarise(soortenaantal=n_distinct(vissoort)) %>% 
+  pivot_wider(names_from = traject, values_from = soortenaantal) %>% 
+  kable(caption="Soortenaantal per sectie en jaar.") 
 ```
