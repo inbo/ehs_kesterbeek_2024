@@ -4,6 +4,109 @@
 INBOmd::references(appendix = TRUE)
 ```
 
-# Eerste hoofdstuk van de bijlage
+# Appendix
 
-Inhoud van de eerste bijlage
+## Project-specifiek protocol
+
+### Overzicht
+
+#### Terreinverkenning
+
+In een eerste fase wordt een terreinbezoek ingepland waarbij mogelijke vismigratieknelpunten worden geïdentificeerd en er een visuele beoordeling plaatsvindt van de variatie in fysische habitats (bedding + oever).
+Dit terreinbezoek heeft plaatsgevonden op 23/4/2024 en inzichten verkregen tijdens het terreinbezoek zijn verwerkt in het verdere voorstel.
+Trajecten worden gebruikt om de hydromorfologische kwaliteit te bepalen.
+Het benodigde aantal trajecten, de lengte per traject en het aantal metingen in de lengterichting en dwarsrichting is afhankelijk van de variatie aan fysische habitats.
+9 trajecten van 50 meter elk met per traject 3 (lengte) x 3 (breedte) cellen zullen een representatief beeld schetsen van het gebied.
+
+#### Hydromorfologische kwaliteit
+
+Voor elk traject wordt de substraatsamenstelling (via inschatting in het veld: 1 meting per cel), stroomsnelheid (1 meting per cel), rivierbreedte (3 metingen per traject) en rivierdiepte (1 meting per cel) gemeten.
+Via visuele beoordeling wordt het aandeel holle oevers (buitenste cellen), waterplanten (1 meting per cel), elementen in de waterloop (hout, stenen, ander: 1 meting per cel) en natuurlijkheid en landgebruik oevers (buitenste cellen) bepaald.
+Om de verstuwingsgraad (een relatief nieuwe maatlat met een hoog potentieel naar gerichte verbetering van de ecologische toestand) te bepalen worden op regelmatige afstanden (maximaal om de 50 meter) hoogteligging metingen van de bedding genomen.
+Ter hoogte van duidelijke situaties van hoog verval (\>20 cm) worden direct voor en na het verval gemeten.
+
+#### Vismigratieknelpunten
+
+Om de identificatie en beoordeling van vismigratieknelpunten te ondersteunen wordt aangeraden om gebruik te maken van visdata.
+Beschikbare visdata in de Kesterbeek is echter beperkt tot enkele vangsten van driedoornige en tiendoornige stekelbaars in 1997, 2002 en 2006 (<https://vis.inbo.be/>).
+Deze data is onvoldoende om te fungeren als baseline voor de PAS-herstelmaatregelen en specifiek om het effect ervan op de habitatrichtlijnsoorten (i.e. bittervoorn, rivierdonderpad en beekprik) te bepalen.
+Verzameling van visdata m.b.v. elektrisch vissen en eDNA om een inzicht te krijgen in de aanwezige soorten (en aantallen en biomassa in het geval van elektrisch vissen) wordt daarom uitgevoerd.
+Visvangsten dienen niet herhaald te worden om als baseline te fungeren maar een adequate periode dient wel bepaald te worden voor een representatieve staalname van ten minste de beoogde soorten.
+5 afvissingen met elektrisch vissen over trajecten van 50 meter worden uitgevoerd.
+7 eDNA stalen worden verzamelt (5 locaties en 2 replicaten op de belangrijkste locaties).
+Idealiter overlappen de elektrisch vissen trajecten en eDNA staalnamepunten met de trajecten waar de hydromorfologie wordt bepaald.
+
+|  |  |  |
+|----|----|----|
+| **Criterium** | **Meetmethode** | **Parameter** |
+| Hydromorfologie | Visuele beoordeling | Aandeel holle oevers |
+| Aandeel waterplanten |  |  |
+| Aandeel elementen waterloop |  |  |
+| Natuurlijkheid oevers |  |  |
+| Landgebruik oevers |  |  |
+| Veldmeting (/labo-analyse) | Substraatsamenstelling |  |
+| Rivierbreedte |  |  |
+| Rivierdiepte |  |  |
+| Stroomsnelheid |  |  |
+| Hoogteligging TAW |  |  |
+| Vismigratieknelpunten | Veldmeting | Elektrisch vissen en eDNA |
+
+### Hydromorfologische kwaliteit
+
+### Visgemeenschap
+
+#### Materiaal
+
+-   2 wagens
+
+-   Materiaal voor elektrisch vissen
+
+-   Lintmeter
+
+-   Plastiek palen
+
+-   Beluchting Containers voor vissen
+
+-   Kruidnagelolie
+
+-   Werktafel
+
+-   Weegschalen
+
+-   Meetlatten voor vissen
+
+-   Field sheets (direct via de laptop invoeren geniet voorkeur maar bij regen tot potlood en papier voorzien)
+
+-   Materiaal voor eDNA (Charlotte): 2 emmers, staalnamestok, consumables (= filters, darmen, staalnamepakketten met handschoenen en zakken), virkon om materiaal te ontsmetten, Vampire sampler, koelbox
+
+Op 3 locaties worden 2 replicaten (n = 6) van een waterstaal genomen dat zal dienen voor eDNA analyses.
+Een zevende, reservestaal wordt mee in rekening gebracht om in het veld in functie van de relevantie van de locaties en inschatting door aanwezige veldmedewerkers, een bijkomend staal te kunnen nemen.
+Ter plaatse werd beslist om dit staal in de Zenne te nemen.
+Twee medewerkers zullen het meest stroomafwaarts starten, en deze eDNA-staalname aanvangen alvorens het elektrisch afvissen wordt aangevat.
+Water wordt hiervoor verzameld gebruik makende van een telescopische staalnamestok, waarbij vanop de oever water genomen wordt.
+Op deze manier worden een 20tal 0.5L-zakjes, bevestigd aan het uiteinde van de staalnamestok, gevuld met water en in een emmer verzameld.
+Dit proces gebeurt tegelijkertijd voor 2 emmers en resulteert op die manier in twee veldreplicaten.
+Bij het nemen van het water, wordt gelet op een diverse, geïntegreerde staalname die beide oevers alsook enkele waterstalen te midden van de waterloop meeneemt.
+Het verzamelde waterstaal in de emmer wordt vervolgens gefilterd met behulp van een peristaltische pomp, en dit over een zeer fijnmazige filter capsule waarop dus het eDNA achterblijft.
+Deze filter wordt nadien droog geblazen en afgesloten met twee daarvoor voorziene caps.
+De filter wordt meteen in een koelbox bewaard, tot deze naar het labo kan gebracht worden voor verdere verwerking.
+
+Na afwerken van een eDNA staalname op een locatie, kan het elektrisch vissen aangevat worden.
+Er wordt hierbij opnieuw gewerkt in stroomopwaartse richting.
+Bij aankomst locatie wordt beginpunt en eindpunt elektrisch vissen ingeschat (50 meter).
+Indien traject bemonsterbaar dan wordt met de lintmeter exact 50 meter bepaald voor het traject en begin en eindpunt worden afgezet met netten.
+1 persoon brengt het elektrisch veld aan op het water, de ander vangt de vissen weg in een ton.
+Belangrijk om zoveel mogelijk verschillende habitats te bemonsteren.
+Soortensamenstelling is belangrijker dan aantallen per soort.
+De coördinaten van het beginpunt worden genoteerd.
+Vissen worden geïdentificeerd op soort en lengte en gewicht worden gemeten.
+
+Opsplitsen in twee groepen: Groep 1: Stijn en Charlotte: eDNA stalen en aansluiten visteam voor identificatie + meten vissen nadat edna staalname klaar is Groep 2: Veldmedewerker 1 en veldmedewerker 2: elektrisch vissen en identificatie + meten vissen totdat Stijn en Charlotte klaar zijn met de edna staalname.
+Stijn en Charlotte beginnen die dag wat vroeger zodat het vissend team altijd stroomafwaarts van hen werkt.
+Stijn en Charlotte gaan eerst naar de locatie aan de Zenne voor het eDNA staal.
+V1 en V2 gaan naar de eerste locatie voor het elektrisch vissen.
+De locaties in de google maps zijn voorstellen.
+Indien een alternatieve locatie in de buurt geschikter lijkt (habitat, bereikbaarheid, etc.) dan kan van dit voorstel afgeweken worden.
+V1 en V2 kunnen beginnen met vissen eens Charlotte en Stijn klaar zijn met de staalname in de Zenne.
+Charlotte en Stijn sluiten pas aan bij het vissend team eens ze klaar zijn met de volledige edna staalname van het gebied (alle 3 locaties).
+Terwijl Charlotte en Stijn de edna staalname doen zullen V1 en V2 zowel het elektrisch vissen doen als de identificatie + meten en wegen.
