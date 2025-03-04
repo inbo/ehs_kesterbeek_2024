@@ -1,8 +1,6 @@
 # Resultaten elektrisch vissen
 
-```{r}
-knitr::opts_chunk$set(fig.width=10, fig.height=10) 
-```
+er werden weinig vissen gevangen.
 
 ```{r}
 library(dplyr)
