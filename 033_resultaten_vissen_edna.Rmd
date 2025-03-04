@@ -11,6 +11,7 @@ library(vegan)
 library(tibble)
 library(pheatmap)
 library(corrplot)
+library(INBOtheme)
 ```
 
 ```{r}
@@ -36,14 +37,14 @@ edna_rra <- read.delim(
 )
 ```
 
-```{r}
+```{r barplot}
 # Zet de dataset om naar numeriek 
 edna_rra_avg <- edna_rra_avg %>%
   mutate(across(
     .cols = -species,                        
     .fns  = ~ as.numeric(gsub(",", ".", .))   
   ))
-
+write.csv(edna_rra_avg, "./data/biotiek/vis/edna/intern/edna_avg.csv")
 
 df_plot <- edna_rra_avg %>%
   pivot_longer(
@@ -74,8 +75,9 @@ ggplot(df_plot, aes(x = averaged_sample, y = relative_abundance, fill = species)
     y = "Relative Abundance",
     title = "Barplot of Averaged Relative Read Abundances"
   ) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
-
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  scale_fill_manual(values = colorRampPalette(INBOtheme::inbo_palette(9))(22))
+# extend the palette to have 22 colours
 ```
 
 ```{r}
@@ -129,9 +131,9 @@ ggplot(pca_scores, aes(x = PC1, y = PC2, label = sample, color = location)) +
     "KB_Kester_4a" = "purple", 
     "KB_Kester_4b" = "darkorange"
   ))  
+```
 
-
-
+```{r}
 # -------- Correlatieplot --------
 species_names <- c(
   "Abramis brama", "Perca fluviatilis", "Squalius cephalus", "Cyprinus carpio", 
@@ -160,7 +162,5 @@ corrplot(cor_matrix,
          cl.pos = "r",        
          cl.lim = c(-1, 1),   
          diag = FALSE,        
-         mar = c(0,0,1,0))    
-
-
+         mar = c(0,0,1,0))   
 ```
