@@ -1,0 +1,10 @@
+if (file.exists("./data/biotiek/")==FALSE){dir.create("./data/biotiek/")}
+if (file.exists("./data/biotiek/vis/")==FALSE){dir.create("./data/biotiek/vis/")}
+if (file.exists("./data/biotiek/vis/elektrisch/")==FALSE){dir.create("./data/biotiek/vis/elektrisch/")}
+if (file.exists("./data/biotiek/vis/elektrisch/extern/")==FALSE){dir.create("./data/biotiek/vis/elektrisch/extern/")}
+if (file.exists("./data/biotiek/vis/elektrisch/extern/ruw/")==FALSE){dir.create("./data/biotiek/vis/elektrisch/extern/ruw/")}
+if (file.exists("./data/biotiek/vis/elektrisch/extern/verwerkt_in_excel/")==FALSE){dir.create("./data/biotiek/vis/elektrisch/extern/verwerkt_in_excel/")}
+if (file.exists("./data/biotiek/vis/elektrisch/intern/")==FALSE){dir.create("./data/biotiek/vis/elektrisch/intern/")}
+if (file.exists("./data/biotiek/vis/edna/")==FALSE){dir.create("./data/biotiek/vis/edna/")}
+if (file.exists("./data/biotiek/vis/edna/extern/")==FALSE){dir.create("./data/biotiek/vis/edna/extern/")}
+if (file.exists("./data/biotiek/vis/edna/intern/")==FALSE){dir.create("./data/biotiek/vis/edna/inetrn/")}
