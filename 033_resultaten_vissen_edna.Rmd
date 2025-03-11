@@ -16,12 +16,13 @@ library(INBOtheme)
 
 ```{r}
 source("./source/functions/f.read_excel_allsheets.R")
+source("./source/not_functions/add_missing_folders.R")
 ```
 
 ```{r}
 # Inlezen van de txt-bestanden 
 edna_rra_avg <- read.delim(
-  here("data","biotiek","vis","elektrisch","extern","ruw","AquatischBeheerCuratedAveragedRRA_Hellinger.txt"),
+  here("data","biotiek","vis","edna","extern","AquatischBeheerCuratedAveragedRRA_Hellinger.txt"),
   sep = "\t", 
   header = TRUE,
   stringsAsFactors = FALSE,
@@ -29,7 +30,7 @@ edna_rra_avg <- read.delim(
 )
 
 edna_rra <- read.delim(
-  here("data","biotiek","vis","elektrisch","extern","ruw","AquatischBeheerCuratedRRA_Hellinger.txt"),
+  here("data","biotiek","vis","edna","extern","AquatischBeheerCuratedRRA_Hellinger.txt"),
   sep = "\t", 
   header = TRUE,
   stringsAsFactors = FALSE,

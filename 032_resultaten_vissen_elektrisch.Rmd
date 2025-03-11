@@ -13,6 +13,7 @@ library(knitr)
 
 ```{r}
 source("./source/functions/f.read_excel_allsheets.R")
+source("./source/not_functions/add_missing_folders.R")
 ```
 
 ```{r}
