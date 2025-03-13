@@ -101,3 +101,7 @@ if (interactive()) {
 }
 ```
 
+```{r}
+knitr::opts_chunk$set(fig.width=10, fig.height=10) 
+```
+
