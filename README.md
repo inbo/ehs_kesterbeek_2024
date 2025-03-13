@@ -4,10 +4,10 @@
 * biotiek
   * vis
     * edna
-      * extern
-      * intern  
+      * extern: externe data (gecreerd buiten R project)
+      * intern: interne data (gecreerd binnen R project) 
     * elektrisch
       * extern: externe data (gecreerd buiten R project) met onderscheid tussen ruw (oorspronkelijke data) verwerkt_in_excel (correctie voor eventuele fouten in de data)
-      * intern  
+      * intern: interne data (gecreerd binnen R project) 
 ## output
 ## source
