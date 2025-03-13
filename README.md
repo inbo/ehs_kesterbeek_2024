@@ -1,0 +1,11 @@
+# folderstructuur
+## data
+* abiotiek
+* biotiek
+  * vis
+    * edna
+      * extern
+      * intern  
+    * elektrisch
+## output
+## source
