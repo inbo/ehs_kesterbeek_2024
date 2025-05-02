@@ -1,1 +1,74 @@
 # Methodologie eDNA vissen
+
+```{r}
+library(dplyr)
+library(simputation)
+library(tidyr)
+library(ggplot2)
+library(ggpubr)
+library(knitr)
+```
+
+## Staalname in het veld
+
+In vier van de zeven locaties binnen de Kesterbeekvallei werden voorafgaand aan het elektrisch vissen eDNA stalen genomen.
+Bij drie locaties werd bijkomend geopteerd om twee biologische, oftewel veldreplicaten te nemen.
+Per staalname werd daarvoor langsheen de oever van de rivier telkens meerdere malen een halve liter oppervlaktewater geschept die vervolgens in een steriele (d.w.z. vrij dan DNA) emmer werd gedeponeerd (Fig. \@ref(fig:ednaveld)A).
+Deze procedure werd herhaald tot heel de afstand van het transect dat nadien werd afgevist werd bemonsterd.
+Hiervoor werd een uitschuifbare staalnamestok gebruikt, waar aan het uiteinde een steriel zakje bevestigd werd, om zo het water te kunnen opscheppen vanaf de oever.
+De verschillende zakjes die zo gevuld werden met water, werden samengevoegd tot één omvangrijk mengstaal (Fig. \@ref(fig:ednaveld)B).
+In een volgende fase werd het verzamelde water van het mengstaal met behulp van een peristaltische pomp door een speciale gesloten filtercapsule met geïntegreerde prefilter (Sterlitech) gepompt.
+Zo werd al het eDNA dat in het water aanwezig was op de filter verzameld (Fig. \@ref(fig:ednaveld)C).
+Er werd gefilterd tot de filter verzadigd was, waarna het gefilterde volume water alsook de precieze staalnamelocatie en het labelnummer zorgvuldig werden genoteerd.
+Voor het nemen van meerdere biologische/veldreplicaten werden twee afzonderlijke emmers gevuld en elk op hun beurt gefilterd, resulterende in twee filters per locaties (voor locaties 2, 4 en 7).
+
+Na filtering, werd de filter meteen in een vriesbox opgeslagen tot deze op het einde van de dag in de diepvries kon worden bewaard.
+Dit is een noodzakelijke handeling om de afbraak van het eDNA op de filter door ultraviolette straling of microbiële activiteit te vermijden in afwachting van de verdere verwerking in het labo.
+
+Bij het nemen van de waterstalen in het veld wordt steeds een strikt en gestandaardiseerd stappenplan gevolgd om contaminatie van de uiteindelijke eDNA stalen met systeemvreemd DNA te vermijden en eveneens te voorkomen dat ziektekiemen, schimmels, of invasieve uitheemse soorten door de staalname van het ene waterlichaam naar het andere zouden worden overgebracht.
+Hiervoor wordt steeds met steriel voorverpakt materiaal gewerkt (zoals zakjes, handschoenen, etc.).
+Herbruikbaar staalnamemateriaal (zoals de uitschuifbare staalnamestok, emmer, etc.) wordt dan ook na elke staalname steeds grondig gereinigd en ontsmet met 2 % Virkon.
+
+```{r ednaveld, fig.cap = "Schematische weergave van het principe van eDNA analyses om gehele gemeenschappen te onderzoeken (eDNA metabarcoding). (A) Een poel waarin op één plek een bepaalde vissoort (ruisvoorn bij wijze van voorbeeld of andere doelsoorten) zouden kunnen rondhangen die voortdurend DNA afgeven aan de omgeving. (B) Het water waarin de vissen vermoedelijk verblijven wordt door middel van een gestandaardiseerd staalnameprotocol verzameld in een emmer. Deze emmer bevat dan het mengstaal van 0.5 liter grote substalen verzameld rondom de oever van het onderzochte waterlichaam. (C) Naast het eDNA van deze vissoort (oranje), zit ook het eDNA afkomstig van andere soorten die in het waterlichaam voorkomen vervat. Al dit eDNA wordt op de filter gecapteerd. (D) In het labo wordt dan al het aanwezige eDNA van de filter gehaald en klaargestoomd voor verdere analyses (extractie). (E) De DNA-fragmenten van alle aanwezige soorten (vissoorten, maar ook amfibieën, zoogdieren, etc.) in het extract worden vervolgens vermenigvuldigd met behulp van een genetische merker en geanalyseerd.", fig.show = "hold", out.width = "100%", fig.align = "default"}
+include_graphics(path = "./media/ednaveld.png")
+```
+
+Tijdens dit onderzoek specifiëren we de verdere analyses uitsluitend op de aanwezige visgemeenschappen.
+Aan de hand van een referentiedatabank kan de juiste soortnaam worden toegekend aan de vermenigvuldigde genetische code.
+Dit stelt ons in staat om met precisie meerdere soorten tegelijkertijd te identificeren zonder dat fysieke waarneming nodig is.
+
+Tijdens eerder eDNA-onderzoek uitgevoerd binnen het INBO (Van Driessche et al., 2022), werd vastgesteld dat in stromende systeme de eDNA-concentratie van een doelsoort significant afneemt naarmate de afstand tussen de bron (de organismen, d.i. de vissen) en de stroomafwaartse staalnamelocatie toeneemt.
+De afstand waarop een dergelijk eDNA signaal volledig verdund is of afgebroken en dus niet meer op te sporen, is echter enkele honderden meters tot zelf kilometers groot.
+Deze grote reikwijdte van eDNA in stromende systemen is te wijten aan het water waarin de eDNA-partikels zweven, dat onder invloed van de stroming verplaatst wordt alvorens het eDNA-signaal volledig is afgebroken.
+Vervolgonderzoek toonde aan dat voor gemeenschapsanalyses, via de metabarcoding-techniek, de reikwijdte van dit signaal iets beperkter is (enkele honderden meters), waarbij een signaal van een lokale visgemeenschap een eventueel restant van eDNA dat in stroomafwaartse richting naar de staalnamelocatie getransporteerd werd, compleet naar de achtergrond verdwijnt.
+Dit laat toe de eDNA-metabarcoding techniek in te schakelen om de visgemeenschappen aanwezig op verscheidene staalnamelocaties binnen eenzelfde stromende waterlichaam onafhankelijk van elkaar in kaart te brengen.
+
+## Labo analyses: gebruikte metabarcoding protocol
+
+Het eDNA dat op de filters achtergebleven is, werd met behulp van een extractiekit (Qiagen Blood & Tissue) geëxtraheerd volgens het protocol van de fabrikant (Fig. \@ref(fig:ednaveld)D), waarna dat geëxtraheerde eDNA de metabarcoding-methodiek onderging (Fig. \@ref(fig:ednaveld)E).
+
+Tijdens de laboprocedure werden steeds een reeks controlestappen ingebouwd die toelaten de kwaliteit van de eDNA-stalen en de efficiëntie van zowel de DNA-extractie als de PCR-reacties te beoordelen.
+Dit geeft ons inzichten over de kwaliteit van de gegenereerde data voordat tot effectieve interpretatie van de resultaten wordt overgegaan.
+Zo worden bijvoorbeeld negatieve controles ingebouwd.
+Deze laboblanco’s zijn stalen zonder DNA die identiek worden behandeld als de eDNA-stalen.
+Met deze controle kunnen we nagaan of doorheen het laboproces geen vals positieve detectie plaatsvindt (d.w.z. foutief vaststellen dat de doelsoort aanwezig is), wat een gevolg zou kunnen zijn van genetische contaminatie, zowel op het niveau van de DNA-extractie als op het niveau van de amplificatie van het DNA-extract.
+
+Voor de metabarcoding-techniek heeft INBO een fijngevoelig protocol ontwikkeld en beschreven, waarin verschillende herhalingen worden opgenomen en controlestappen vervat zitten (zie Brys et al., 2021).
+Hierbij wordt gebruik gemaakt van een generalistische vertebraat primer (Riaz pimers), gelegen op het mitochondriaal 12S locus, waarvoor INBO een eigen referentiedatabank heeft uitgebouwd (Halfmaerten et al., 2023).
+Deze referentiedatabank laat toe om alle inheemse, West-Europese alsook reeds eerder waargenomen en dus te verwachten uitheemse zoogdieren, amfibieën en zoetwater vissen accuraat te detecteren en op naam te brengen.
+Het ontwikkelde protocol maakt gebruik van een DNA fragment dat \~142-bp lang is en dat wordt geamplificeerd door middel van de Riaz primers (12S_F1, 5′-ACTGGGATTAGATACCCC-3′;12S_R1, 5′-TAGAACAGGCTCCTCTAG-3′) (Riaz *et al.*, 2011).
+
+Per staal worden vervolgens standaard drie herhalingen van de verdere labo analyses uitgevoerd, waarvan, na opschonen van de ruwe data, verder wordt gewerkt met het gemiddelde resultaat van deze drie technische replicaten voor visualisatie en interpretatie.
+Het gebruikte labo- en bio-informatische protocol staat in detail beschreven in Brys et al. (2021) alsook verder uitgelegd en toegepast in Van Driessche et al. (2024).
+Binnen deze studie werd vervolgens enkel verder gewerkt met de gedetecteerde vissoorten.
+Finaal worden enkel de sequenties weerhouden die een 100 % match vertonen met één van de soorten in de referentiedatabank.
+Deze opgeschoonde data, de zogenaamde gesommeerde sequenties per soort voor elk staal, worden in een volgende stap getransformeerd naar de relatieve abundantie van elke soort t.o.v. alle andere soorten die voorkomen binnen dat betreffende staal.
+Hierbij werd een normalisatiestap via de Hellinger transformatie toegepast (zie ook Van Driessche et al., 2024).
+Dit maakt dat het eindproduct van metabarcoding data steeds een proportioneel aandeel van de betreffende soorten weergeeft binnen elk genomen eDNA staal, en dus niet als absolute eDNA meting kan worden aanzien.
+Van elk staal worden drie onafhankelijke replica’s geanalyseerd, en na controle van de data uitgemiddeld om te komen tot een gemiddelde samenstelling van de visgemeenschap van elk staal.
+
+Naast de mogelijkheid en het voordeel om in één analyse verschillende soorten simultaan in kaart te kunnen brengen, is een kanttekening die hierbij wel dient gemaakt te worden dat de detectieresolutie van eDNA metabarcoding resultaten wat lager ligt dan soort-specifieke eDNA drople digital PCR (ddPCR) methode (zoals bijvoorbeeld kan worden uitgevoerd om heel zeldzame soorten op te sporen).
+Hierdoor is eDNA metabarcoding vaak iets minder gevoelig en dus minder geschikt om een erg zeldzame of laag abundante soort in het landschap op te sporen.
+Experimenteel onderzoek in kweekvijvers van het INBO heeft anderzijds reeds aangetoond, dat in relatief kleine waterpartijen, we via eDNA metabarcoding de aanwezigheid van één tot enkele individuen bittervoorn kunnen opsporen.
+Enkel in erg grote waterpartijen kan het soms zijn dat zulke lage dichtheden door verdunningseffecten kunnen worden gemist.
+Anderzijds zijn soorten die in deze metabarcoding analyses naar voor komen, naar alle waarschijnlijkheid soorten die in grotere aantallen aanwezig zijn binnen het studiegebied.

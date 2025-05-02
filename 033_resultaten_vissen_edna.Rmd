@@ -38,50 +38,16 @@ edna_rra <- read.delim(
 )
 ```
 
-```{r barplot}
-# Zet de dataset om naar numeriek 
-edna_rra_avg <- edna_rra_avg %>%
-  mutate(across(
-    .cols = -species,                        
-    .fns  = ~ as.numeric(gsub(",", ".", .))   
-  ))
-write.csv(edna_rra_avg, "./data/biotiek/vis/edna/intern/edna_avg.csv")
+Alle blanco’s die tijdens de workflow werden ingebouwd, bleken op het einde van het proces negatief.
+Er werd geoordeeld dat de resultaten betrouwbaar en herhaalbaar zijn.
+Bij de twee veldreplicaten genomen op locatie 7, de meest stroomopwaarts gelegen locatie, trad geen positieve amplificatie op, wat aangeeft dat er geen sporen van vis-eDNA werden teruggevonden op deze locatie.
+Bij de resterende 5 filters, genomen op in totaal 3 verschillende locaties, konden wel visgemeenschappen in kaart worden gebracht.
+De betrouwbaarheid van de technische replicaten werd geëvalueerd aan de hand van een Principal Components Analyse (PCA, Fig. \@ref(fig:pca)) op basis van de relatieve abundantie van elke soort binnen de visgemeenschap.
+Uit de visualisatie blijkt dat de replicaten van dezelfde locatie sterk clusteren, wat wijst op een hoge reproduceerbaarheid van de metingen.
+Dit geeft aan dat de technische variabiliteit minimaal is, en dat de waargenomen verschillen voornamelijk toe te schrijven zijn aan biologische of omgevingsfactoren.
+Deze consistente clustering ondersteunt de betrouwbaarheid en robuustheid van de gebruikte analysemethode.
 
-df_plot <- edna_rra_avg %>%
-  pivot_longer(
-    cols = -species,                       
-    names_to = "averaged_sample",
-    values_to = "relative_abundance"
-  )
-
-# Labels aanpassen op X as voor visualisatie
-df_plot$averaged_sample <- str_replace_all(df_plot$averaged_sample, 
-                                           c(
-                                             "averaged_E2024STF1009PC_KB_Zenne1_Aquatisch.Beheer_1" = "KB_Zenne_1",
-                                             "averaged_E2024STF992PC_KB_Molenbeek2a_Aquatisch.Beheer_1" = "KB_Molenbeek_2a",
-                                             "averaged_E2024STF1010PC_KB_Molenbeek2b_Aquatisch.Beheer_1" = "KB_Molenbeek_2b",
-                                             "averaged_E2024STF994PC_Kester4a_Aquatisch.Beheer_1" = "KB_Kester_4a",
-                                             "averaged_E2024STF995PC_Kester4b_Aquatisch.Beheer_1" = "KB_Kester_4b"
-                                           ))
-
-# plot relative abundance of species per sample
-ggplot(df_plot, aes(x = averaged_sample, y = relative_abundance, fill = species)) +
-  geom_bar(stat = "identity") +
-  geom_text(aes(label = species),
-            position = position_stack(vjust = 0.5),  
-            size = 1, color = "black") +
-  theme_minimal() +
-  labs(
-    x = "Averaged Samples",
-    y = "Relative Abundance",
-    title = "Barplot of Averaged Relative Read Abundances"
-  ) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
-  scale_fill_manual(values = colorRampPalette(INBOtheme::inbo_palette(9))(22))
-# extend the palette to have 22 colours
-```
-
-```{r}
+```{r pca, fig.cap="Principal Component Analyse (PCA) plot van de verschillende eDNA metabarcoding stalen. De verschillende kleuren vertegenwoordigen de locaties waar de stalen werden genomen. De clustering van de technische replicaten binnen dezelfde locatie liggen binnen de verwachtingen en duiden op een goede reproduceerbaarheid van de metingen."}
 #verdere data visualisatie
 edna_rra_samples <- edna_rra %>%
   select(9:23) %>%  
@@ -132,6 +98,64 @@ ggplot(pca_scores, aes(x = PC1, y = PC2, label = sample, color = location)) +
     "KB_Kester_4a" = "purple", 
     "KB_Kester_4b" = "darkorange"
   ))  
+```
+
+De opgeschoonde resultaten van de metabarcoding (Fig. \@ref(fig:barplot)) tonen aan dat de samenstelling van de visgemeenschappen sterk varieert tussen de verschillende staalnamelocaties.
+Zo wordt in locatie Zenne 1 een sterke dominantie van *Gobio gobio*, oftwel riviergrondel, waargenomen.
+Andere locaties kennen een meer evenwichtige verdeling van de verschillende vissoorten.
+Dit wijst op mogelijke ecologische of omgevingsfactoren die de verspreiding en detectie van soorten beïnvloeden.
+
+Bij de meest stroomopwaarts gelegen locatie in de Kesterbeek (locatie 7) werd geen vis-eDNA opgespoord Dit suggereert dat in deze zone geen, of slechts in zeer lage concentraties vis-eDNA aanwezig is.
+Mogelijke verklaringen hiervoor zijn een beperktere vispopulatie, een lagere waterdoorstroming waardoor eDNA minder goed verspreid wordt, of een hogere afbraak van eDNA onder invloed van bepaalde omgevingsfactoren.
+
+Daarnaast kan de invloed van hydrologische barrières, zoals stuwen of andere waterstructuren, een rol spelen in de verspreiding van vissoorten binnen het studiegebied.
+Dit zou kunnen verklaren waarom bepaalde soorten, zoals *Gobio gobio*, sterk aanwezig zijn in specifieke zones terwijl andere locaties een diversere gemeenschap vertonen.
+Verder kan de habitatkwaliteit een bepalende factor zijn, waarbij soorten zoals *Cyprinus carpio* (kaper) en *Esox lucius* (snoek) eerder voorkomen in locaties met specifieke hydrologische kenmerken zoals langzaam stromend of stilstaand water.
+
+Ten slotte bevestigt de consistentie van veldreplicaten genomen binnen eenzelfde staalnamelocatie de betrouwbaarheid van de gebruikte metabarcoding-methodologie.
+Deze resultaten benadrukken het belang van zowel biologische als hydrologische factoren in de verspreiding van vissoorten en onderstrepen de waarde van eDNA-analyse voor het monitoren van aquatische ecosystemen.
+
+```{r barplot, fig.cap="Barplot of staafdiagram van de gemiddelde (van de technische replicaten) relatieve sequentie-abundanties per staal. De verschillende kleuren vertegenwoordigen de gedetecteerde vissoorten, waarbij de relatieve abundantie per soort per locatie wordt weergegeven. Let wel, op twee locaties werden twee eDNA filters genomen, die elk gelden als biologische, dan wel als veldreplicaten."}
+# Zet de dataset om naar numeriek 
+edna_rra_avg <- edna_rra_avg %>%
+  mutate(across(
+    .cols = -species,                        
+    .fns  = ~ as.numeric(gsub(",", ".", .))   
+  ))
+write.csv(edna_rra_avg, "./data/biotiek/vis/edna/intern/edna_avg.csv")
+
+df_plot <- edna_rra_avg %>%
+  pivot_longer(
+    cols = -species,                       
+    names_to = "averaged_sample",
+    values_to = "relative_abundance"
+  )
+
+# Labels aanpassen op X as voor visualisatie
+df_plot$averaged_sample <- str_replace_all(df_plot$averaged_sample, 
+                                           c(
+                                             "averaged_E2024STF1009PC_KB_Zenne1_Aquatisch.Beheer_1" = "KB_Zenne_1",
+                                             "averaged_E2024STF992PC_KB_Molenbeek2a_Aquatisch.Beheer_1" = "KB_Molenbeek_2a",
+                                             "averaged_E2024STF1010PC_KB_Molenbeek2b_Aquatisch.Beheer_1" = "KB_Molenbeek_2b",
+                                             "averaged_E2024STF994PC_Kester4a_Aquatisch.Beheer_1" = "KB_Kester_4a",
+                                             "averaged_E2024STF995PC_Kester4b_Aquatisch.Beheer_1" = "KB_Kester_4b"
+                                           ))
+
+# plot relative abundance of species per sample
+ggplot(df_plot, aes(x = averaged_sample, y = relative_abundance, fill = species)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = species),
+            position = position_stack(vjust = 0.5),  
+            size = 1, color = "black") +
+  theme_minimal() +
+  labs(
+    x = "Averaged Samples",
+    y = "Relative Abundance",
+    title = "Barplot of Averaged Relative Read Abundances"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  scale_fill_manual(values = colorRampPalette(INBOtheme::inbo_palette(9))(22))
+# extend the palette to have 22 colours
 ```
 
 ```{r}

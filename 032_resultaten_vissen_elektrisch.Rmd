@@ -1,5 +1,9 @@
 # Resultaten elektrisch vissen
 
+```{r}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
 er werden weinig vissen gevangen.
 
 ```{r}
