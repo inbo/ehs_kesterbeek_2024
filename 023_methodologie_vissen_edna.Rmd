@@ -11,7 +11,7 @@ library(knitr)
 
 ## Staalname in het veld
 
-In vier van de zeven locaties binnen de Kesterbeekvallei werden voorafgaand aan het elektrisch vissen eDNA stalen genomen.
+In vier van de zeven locaties binnen de Kesterbeekvallei ([klik hier](https://www.google.com/maps/d/edit?mid=1P_5L6JCts-SyDYWms0wqWhxO8IqMXBY&usp=sharing)) werden voorafgaand aan het elektrisch vissen eDNA stalen genomen.
 Bij drie locaties werd bijkomend geopteerd om twee biologische, oftewel veldreplicaten te nemen.
 Per staalname werd daarvoor langsheen de oever van de rivier telkens meerdere malen een halve liter oppervlaktewater geschept die vervolgens in een steriele (d.w.z. vrij dan DNA) emmer werd gedeponeerd (Fig. \@ref(fig:ednaveld)A).
 Deze procedure werd herhaald tot heel de afstand van het transect dat nadien werd afgevist werd bemonsterd.
