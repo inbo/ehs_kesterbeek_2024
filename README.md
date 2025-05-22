@@ -8,9 +8,11 @@
       * intern: interne data (gecreerd binnen R project) 
     * elektrisch: alle data van het elektrisch vissen
       * extern: externe data (gecreerd buiten R project) met onderscheid tussen ruw (oorspronkelijke data) verwerkt_in_excel (correctie voor eventuele fouten in de data)
-      * intern: interne data (gecreerd binnen R project) 
+      * intern: interne data (gecreerd binnen R project)
+## media
+pictures
 ## output
-opslag build bookdown
+rapport in pdf
 ## source
 * functions
   * f.read_excel_allsheets.R: leest in alle aparte worksheets van een excel en plakt deze aanmekaar in 1 dataframe
