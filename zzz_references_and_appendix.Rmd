@@ -8,24 +8,42 @@ INBOmd::references(appendix = TRUE)
 
 ## Project-specifiek protocol
 
-### Overzicht
+### Onderwerp
 
-#### Terreinverkenning
+#### Definities en afkortingen
+
+#### Doelstelling en toepassingsgebied
+
+**Doelstelling**
+
+**Toepassingsgebied:**
+
+### Beperkingen van het protocol
+
+**Begaanbaar**
+
+### Principe
+
+### Vereiste competenties
+
+### Terreinverkenning
 
 In een eerste fase wordt een terreinbezoek ingepland waarbij mogelijke vismigratieknelpunten worden geïdentificeerd en er een visuele beoordeling plaatsvindt van de variatie in fysische habitats (bedding + oever).
-Dit terreinbezoek heeft plaatsgevonden op 23/4/2024 en inzichten verkregen tijdens het terreinbezoek zijn verwerkt in het verdere voorstel.
+Dit terreinbezoek heeft plaatsgevonden op 23/4/2024 en inzichten verkregen tijdens het terreinbezoek zijn verwerkt in het protocol.
 Trajecten worden gebruikt om de hydromorfologische kwaliteit te bepalen.
 Het benodigde aantal trajecten, de lengte per traject en het aantal metingen in de lengterichting en dwarsrichting is afhankelijk van de variatie aan fysische habitats.
 9 trajecten van 50 meter elk met per traject 3 (lengte) x 3 (breedte) cellen zullen een representatief beeld schetsen van het gebied.
 
-#### Hydromorfologische kwaliteit
+### Habitatbeschrijving
+
+#### Materiaal
 
 Voor elk traject wordt de substraatsamenstelling (via inschatting in het veld: 1 meting per cel), stroomsnelheid (1 meting per cel), rivierbreedte (3 metingen per traject) en rivierdiepte (1 meting per cel) gemeten.
 Via visuele beoordeling wordt het aandeel holle oevers (buitenste cellen), waterplanten (1 meting per cel), elementen in de waterloop (hout, stenen, ander: 1 meting per cel) en natuurlijkheid en landgebruik oevers (buitenste cellen) bepaald.
 Om de verstuwingsgraad (een relatief nieuwe maatlat met een hoog potentieel naar gerichte verbetering van de ecologische toestand) te bepalen worden op regelmatige afstanden (maximaal om de 50 meter) hoogteligging metingen van de bedding genomen.
 Ter hoogte van duidelijke situaties van hoog verval (\>20 cm) worden direct voor en na het verval gemeten.
 
-#### Vismigratieknelpunten
+### Vismigratieknelpunten
 
 Om de identificatie en beoordeling van vismigratieknelpunten te ondersteunen wordt aangeraden om gebruik te maken van visdata.
 Beschikbare visdata in de Kesterbeek is echter beperkt tot enkele vangsten van driedoornige en tiendoornige stekelbaars in 1997, 2002 en 2006 (<https://vis.inbo.be/>).
@@ -36,22 +54,22 @@ Visvangsten dienen niet herhaald te worden om als baseline te fungeren maar een 
 7 eDNA stalen worden verzamelt (5 locaties en 2 replicaten op de belangrijkste locaties).
 Idealiter overlappen de elektrisch vissen trajecten en eDNA staalnamepunten met de trajecten waar de hydromorfologie wordt bepaald.
 
-|  |  |  |
-|----|----|----|
-| **Criterium** | **Meetmethode** | **Parameter** |
-| Hydromorfologie | Visuele beoordeling | Aandeel holle oevers |
-| Aandeel waterplanten |  |  |
-| Aandeel elementen waterloop |  |  |
-| Natuurlijkheid oevers |  |  |
-| Landgebruik oevers |  |  |
-| Veldmeting (/labo-analyse) | Substraatsamenstelling |  |
-| Rivierbreedte |  |  |
-| Rivierdiepte |  |  |
-| Stroomsnelheid |  |  |
-| Hoogteligging TAW |  |  |
-| Vismigratieknelpunten | Veldmeting | Elektrisch vissen en eDNA |
+\newpage
 
-### Hydromorfologische kwaliteit
+|                       |                     |                             |
+|-----------------------|---------------------|-----------------------------|
+| **Criterium**         | **Meetmethode**     | **Parameter**               |
+| Hydromorfologie       | Visuele beoordeling | Aandeel holle oevers        |
+|                       |                     | Aandeel waterplanten        |
+|                       |                     | Aandeel elementen waterloop |
+|                       |                     | Natuurlijkheid oevers       |
+|                       |                     | Landgebruik oevers          |
+|                       | Veldmeting          | Substraatsamenstelling      |
+|                       |                     | Rivierbreedte               |
+|                       |                     | Rivierdiepte                |
+|                       |                     | Stroomsnelheid              |
+|                       |                     | Hoogteligging TAW           |
+| Vismigratieknelpunten | Veldmeting          | Elektrisch vissen en eDNA   |
 
 ### Visgemeenschap
 
