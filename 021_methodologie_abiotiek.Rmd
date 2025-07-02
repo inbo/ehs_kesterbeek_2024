@@ -1,3 +1,21 @@
 # Methodologie abiotiek
 
 Locaties knelpunten: [klik hier](https://www.google.com/maps/d/edit?mid=1P_5L6JCts-SyDYWms0wqWhxO8IqMXBY&usp=sharing)
+
+## Verstuwingsgraad
+
+De keuze om stroomopwaarts of stroomafwaarts te beginnen is voor de opmeting van de verstuwingsgraad niet cruciaal en zal worden bepaald door de andere simultane opnames en logistiek.
+Om de 50 meter wordt m.b.v. de Trimble GPS met totaalstation de locatie (X, Y en Z) van het midden van de bodem bepaald.
+Voor elke van deze locaties wordt de waterdiepte genoteerd.
+Voor elk verhang groter dan 10 cm worden extra GPS coördinaten en waterdieptes verzamelt 0.5 meter voor en 0.5 meter na het verhang.
+Bovendien wordt het exacte verhang (op 0 meter) tussen de waterhoogtes gemeten en genoteerd.
+
+Benodigd materiaal:
+
+-   Trimble en totaalstation
+
+-   Peilstok
+
+-   Invulformulier
+
+-   Schrijfplank en potloden

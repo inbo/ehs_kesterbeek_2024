@@ -4,10 +4,354 @@
 library(dplyr)
 library(simputation)
 library(tidyr)
+library(knitr)
+library(magick)
 ```
 
 ```{r}
 source("./source/functions/f.read_excel_allsheets.R")
 ```
 
+## Locatie 1
+
+```{r location1, fig.cap = "De eerste locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
+
+# Load and auto-orient each image
+paths <- c(
+  "./media/hydromorfologie/kb1/20250617_095403.jpg",
+  "./media/hydromorfologie/kb1/20250617_095633.jpg",
+  "./media/hydromorfologie/kb1/20250617_095653.jpg",
+  "./media/hydromorfologie/kb1/20250617_095808.jpg"
+)
+
+images <- lapply(paths, function(p) {
+  img <- image_read(p)
+  image_orient(img)  # This is the correct function
+})
+
+# Display in two rows
+grid::grid.newpage()
+gridExtra::grid.arrange(grobs = lapply(images, grid::rasterGrob), nrow = 2)
+```
+
+Tijdens het veldwerk werden geen uitzonderlijke weersomstandigheden genoteerd.
+De gemiddelde kraagbreedte, breedte t.h.v. het wateroppervlak en gemiddelde diepte bedroegen respectievelijk 6.3, 4.5 en 0.9 m.
+De breedtevariatie was uitgesproken met meer dan drie breedtes.
+De stromingsvariatie was laag.
+Waterstroomsnelheid en waterdiepte waren gemiddeld 0.096 m/s en 0.38 m.
+Het bodemsubstraat was grotendeels zichtbaar, volledig natuurlijk en bestond uit leem (60 %), grof organisch materiaal (30 %) en detritus (10 %).
+Er was geen slib aanwezig.
+Er was praktisch geen schaduw.
+De beek vertoont duidelijke meandering en in de betreffende sectie werden 2 binnenbochten geobserveerd.
+Stroomkuilen waren matig ontwikkeld.
+Er waren geen eendenkroos of algen aanwezig.
+Slanke waterkers (waterplant) was in beperkte mate aanwezig.
+Dood hout werd niet geobserveerd.
+Er waren geen noemenswaardige barrières aanwezig.
+Kromingserosie was beperkt aanwezig maar breedte-erosie was afwezig.
+Het profiel van de oever was voor de hele sectie natuurlijk, geleidelijk en niet vertrappeld (een niet verstevigde oever met een overwegend flauwe taludhelling).
+De oevers bestonden voornamelijk uit grassen en kruiden en langs beiden zijn was er sprake van overhangende vegetatie.
+Langs de oevers werden geen exotische soorten geobserveerd.
+Bomen waren afwezig.
+Het landgebruik bestond voor beide oevers volledig uit grasland.
+
+## Locatie 2
+
+```{r location2, fig.cap = "De tweede locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
+
+# Load and auto-orient each image
+paths <- c(
+  "./media/hydromorfologie/kb2/20250617_110139.jpg",
+  "./media/hydromorfologie/kb2/20250617_110157.jpg",
+  "./media/hydromorfologie/kb2/20250617_110214.jpg",
+  "./media/hydromorfologie/kb2/20250617_110251.jpg"
+)
+
+images <- lapply(paths, function(p) {
+  img <- image_read(p)
+  image_orient(img)  # This is the correct function
+})
+
+# Display in two rows
+grid::grid.newpage()
+gridExtra::grid.arrange(grobs = lapply(images, grid::rasterGrob), nrow = 2)
+```
+
+Tijdens het veldwerk werden geen uitzonderlijke weersomstandigheden genoteerd.
+De gemiddelde kraagbreedte, breedte t.h.v. het wateroppervlak en gemiddelde diepte bedroegen respectievelijk 1.7, 1.1 en 0.6 m.
+De breedtevariatie was uitgesproken met meer dan drie breedtes.
+De stromingsvariatie was matig.
+Waterstroomsnelheid en waterdiepte waren gemiddeld 0.26 m/s en 0.15 m.
+Het bodemsubstraat was grotendeels zichtbaar, grotendeels natuurlijk (sporadisch bakstenen aanwezig) en bestond uit leem (30%), zand (30 %), grind (30%), detritus (5 %) en slib (5 %).
+De volledige riviersectie was volledig beschaduwd.
+De beek vertoont duidelijke meandering en in de betreffende sectie werden 2 binnenbochten, 1 point bar (sedimentbank in de stroomluwe binnenbochten) en 4 side bars (sedimentbank langs de oevers in rechtlijnige stukken van de waterloop) geobserveerd.
+Stroomkuilen waren matig ontwikkeld.
+Er waren geen eendenkroos of algen aanwezig.
+Waterplanten waren ook afwezig.
+Fijn dood hout (diameter \< 3 cm) was abundant.
+Er waren geen noemenswaardige barrières aanwezig.
+Zowel kromingserosie als breedte-erosie waren beperkt aanwezig.
+Het profiel van de oever was voor de hele sectie natuurlijk.
+Langs de linkeroever kwamen voornamelijk relatief steile (\>45°) niet-verstevigde oevers en in mindere mate verticale oevers met beperkte sedimentafzetting voor.
+De oevers bestonden voornamelijk uit struiken en bomen en langs beiden zijn was er sprake van overhangende vegetatie.
+Langs de oevers werden geen exotische soorten geobserveerd.
+Langs beide oevers waren meer dan 5 bomenrijen aanwezig.
+Het landgebruik bestond voor beide oevers volledig uit natuurlijk bos.
+
+## Locatie 3
+
+```{r location3, fig.cap = "De derde locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
+
+# Load and auto-orient each image
+paths <- c(
+  "./media/hydromorfologie/kb3/20250617_114053.jpg",
+  "./media/hydromorfologie/kb3/20250617_114058.jpg",
+  "./media/hydromorfologie/kb3/20250617_114106.jpg",
+  "./media/hydromorfologie/kb3/20250617_114246.jpg"
+)
+
+images <- lapply(paths, function(p) {
+  img <- image_read(p)
+  image_orient(img)  # This is the correct function
+})
+
+# Display in two rows
+grid::grid.newpage()
+gridExtra::grid.arrange(grobs = lapply(images, grid::rasterGrob), nrow = 2)
+```
+
+Dit traject wijkt af van de standaardtrajecten omdat dit traject slechts 20 m bedroeg en niet per se representatief was voor het gebied.
+Dit bijkomend transect werd geselecteerd omwille van de relatief belangrijke visbarrière (sifon met verval van 0.4 m).
+Het transect werd zo ingericht dat 10 m voor en 10 m na het verval werden beschouwd.
+Tijdens het veldwerk op 17/6/2025 werden geen uitzonderlijke weersomstandigheden genoteerd.
+De gemiddelde kraagbreedte, breedte t.h.v. het wateroppervlak en gemiddelde diepte bedroegen respectievelijk 3.1, 1.9 en 1.8 m.
+De breedtevariatie was matig met één dominante en twee plaatselijke breedtes.
+De stromingsvariatie was hoog.
+Waterstroomsnelheid en waterdiepte waren gemiddeld 0.1 m/s en 0.32 m.
+Het bodemsubstraat was grotendeels zichtbaar, matig natuurlijk (betonnen goot voor sifon aanwezig) en bestond uit beton (50 %), grind (20 %), grof organisch materiaal (10 %), slib (10 %, 5-20 cm diep), zand (5%) en klei (5%).
+De volledige riviersectie was volledig beschaduwd.
+De beek vertoont beperkte meandering en in de betreffende sectie werd één side bar (sedimentbank langs de oevers in rechtlijnige stukken van de waterloop) geobserveerd.
+Stroomkuilen waren goed ontwikkeld.
+Er waren geen eendenkroos of algen aanwezig.
+Waterplanten waren ook afwezig.
+Fijn dood hout (diameter \< 3 cm) was beperkt aanwezig.
+De sifon vormt een belangrijke barrière voor visbeweging met een verval van 0.4 m.
+Breedte-erosie was sterk aanwezig.
+Het profiel van de oever was voor de helft (deel na sifon) natuurlijk.
+Langs de linkeroever en rechterover voor het verval waren de overs volledig verhard uit beton zonder vegetatie.
+Na het verval waren oevers natuurlijk.
+De linkeroever na het verval bestond uit verticale en holle oever die door erosie deels ondergraven was.
+Verder stroomafwaarts was de linkeroever voornamelijk steil.
+Op de rechteroever net stroomafwaarts van het verval was er minder effect van de erosie door het verval en was de oever veelal verticaal met oeverafzetting.
+Verder stroomafwaarts was de niet-verstevigde oever geleidelijk en niet vertrappeld.
+De oevers bestonden voornamelijk uit struiken en bomen en langs beiden zijn was er sprake van overhangende vegetatie.
+Langs de oevers werden geen exotische soorten geobserveerd.
+Langs beide oevers waren meer dan 5 bomenrijen aanwezig.
+Het landgebruik bestond voor beide oevers voornamelijk uit natuurlijk bos en beperkt ook door een verharde weg die zich over de sifon bevond.
+
+## Locatie 4
+
+```{r location4, fig.cap = "De vierde locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
+
+# Load and auto-orient each image
+paths <- c(
+  "./media/hydromorfologie/kb4/20250617_130506.jpg",
+  "./media/hydromorfologie/kb4/20250617_130558.jpg",
+  "./media/hydromorfologie/kb4/20250617_130606.jpg",
+  "./media/hydromorfologie/kb4/20250617_130610.jpg"
+)
+
+images <- lapply(paths, function(p) {
+  img <- image_read(p)
+  image_orient(img)  # This is the correct function
+})
+
+# Display in two rows
+grid::grid.newpage()
+gridExtra::grid.arrange(grobs = lapply(images, grid::rasterGrob), nrow = 2)
+```
+
+Tijdens het veldwerk werden geen uitzonderlijke weersomstandigheden genoteerd.
+De gemiddelde kraagbreedte, breedte t.h.v. het wateroppervlak en gemiddelde diepte bedroegen respectievelijk 1.0, 0.8 en 0.5 m.
+De breedtevariatie was matig met twee breedtes.
+De stromingsvariatie was matig.
+Waterstroomsnelheid en waterdiepte waren gemiddeld 0.40 m/s en 0.14 m.
+Het bodemsubstraat was volledig zichtbaar, grotendeels onnatuurlijk en bestond uit stortsteen (90%), leem (5%) en zand (5 %).
+De riviersectie was deels beschaduwd.
+De beek vertoont geen duidelijke meandering.
+Stroomkuilen waren beperkt ontwikkeld.
+Er waren geen eendenkroos of algen aanwezig.
+Waterplanten (waternavel) waren beperkt aanwezig.
+Er was geen dood hout aanwezig.
+Er was 1 sifon aanwezig deze had geen verval.
+Er was geen sprake van erosie.
+Het profiel van de oever was grotendeels onnatuurlijk.
+Langs beide oevers kwamen voornamelijk volledig verstevigde oevers voor en in mindere mate relatief steile (\>45°) niet-verstevigde oevers.
+De oevers bestonden uit grassen, kruiden, struiken en bomen en langs beiden zijn was er sprake van overhangende vegetatie.
+Langs de oevers werden geen exotische soorten geobserveerd.
+Langs de helft van de sectie liep een onverhard pad.
+Het landgebruik bestond voor de linkeroever uit grasland en struiken (50%) en tuinen met bomen (50%) en voor de rechteroever uit grasland en struiken (50%) en onverhard pad (50%).
+
+## Locatie 5
+
+```{r location5, fig.cap = "De vijfde locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
+
+# Load and auto-orient each image
+paths <- c(
+  "./media/hydromorfologie/kb5/20250618_090454.jpg",
+  "./media/hydromorfologie/kb5/20250618_090501.jpg",
+  "./media/hydromorfologie/kb5/20250618_090503.jpg",
+  "./media/hydromorfologie/kb5/20250618_090621.jpg"
+)
+
+images <- lapply(paths, function(p) {
+  img <- image_read(p)
+  image_orient(img)  # This is the correct function
+})
+
+# Display in two rows
+grid::grid.newpage()
+gridExtra::grid.arrange(grobs = lapply(images, grid::rasterGrob), nrow = 2)
+```
+
+Tijdens het veldwerk van 18/6/2025 werden geen uitzonderlijke weersomstandigheden genoteerd.
+De gemiddelde kraagbreedte, breedte t.h.v. het wateroppervlak en gemiddelde diepte bedroegen respectievelijk 1.9, 1.0 en 0.5 m.
+De breedtevariatie was uitgesproken met meer dan drie breedtes.
+De stromingsvariatie was hoog.
+Waterstroomsnelheid en waterdiepte waren gemiddeld 0.37 m/s en 0.15 m.
+Het bodemsubstraat was volledig zichtbaar en natuurlijk en bestond uit leem (60 %), grind (25 %), zand (5 %), grof organisch materiaal (5 %) en detritus (5 %).
+De riviersectie was deels beschaduwd over de hele lengte.
+De beek vertoont duidelijke meandering met meerdere binnenbochten en point bars.
+Stroomkuilen waren sterk ontwikkeld.
+Er waren geen eendenkroos of algen aanwezig.
+Waterplanten (groot moerasscherm en gele lis) waren beperkt aanwezig.
+Fijn dood hout (diameter \< 3 cm) was beperkt aanwezig.
+Krommingserosie kwam beperkt voor.
+Het profiel van de oever was volledig natuurlijk.
+De oevers waren niet-verstevigd, geleidelijk en niet vertrappeld.
+De oevers bestonden uit grassen, kruiden, struiken en bomen en langs beiden zijn was er sprake van overhangende vegetatie.
+Langs de oevers werden geen exotische soorten geobserveerd.
+Langs de de linkeroever liep een onverhard pad, terwijl de rechteroever tuinen betrof.
+
+## Locatie 6
+
+```{r location6, fig.cap = "De zesde locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
+
+# Load and auto-orient each image
+paths <- c(
+  "./media/hydromorfologie/kb6/20250618_113939.jpg",
+  "./media/hydromorfologie/kb6/20250618_113943.jpg",
+  "./media/hydromorfologie/kb6/20250618_114005.jpg",
+  "./media/hydromorfologie/kb6/20250618_114002.jpg"
+)
+
+images <- lapply(paths, function(p) {
+  img <- image_read(p)
+  image_orient(img)  # This is the correct function
+})
+
+# Display in two rows
+grid::grid.newpage()
+gridExtra::grid.arrange(grobs = lapply(images, grid::rasterGrob), nrow = 2)
+```
+
+Tijdens het veldwerk van 18/6/2025 werden geen uitzonderlijke weersomstandigheden genoteerd.
+De gemiddelde kraagbreedte, breedte t.h.v. het wateroppervlak en gemiddelde diepte bedroegen respectievelijk 3.0, 1.4 en 1.0 m.
+De breedtevariatie was beperkt tot twee breedtes.
+De stromingsvariatie was laag.
+Waterstroomsnelheid en waterdiepte waren gemiddeld 0.08 m/s (gemeten op 0.02 m) en 0.04 m.
+Het bodemsubstraat was beperkt zichtbaar maar natuurlijk en bestond uit leem (80 %) en zand (20 %).
+De riviersectie was deels beschaduwd over de hele lengte.
+De beek vertoont beperkte meandering met één binnenbocht.
+Stroomkuilen werden niet geobserveerd.
+Er waren geen eendenkroos of algen aanwezig.
+Waterplanten waren niet aanwezig.
+Fijn dood hout van alle diameters was beperkt aanwezig.
+Er was geen erosie zichtbaar.
+Het profiel van de oever was volledig natuurlijk.
+De oevers waren niet-verstevigd en steil tot verticaal.
+De oevers bestonden uit grassen, kruiden, struiken en bomen en langs beiden zijn was er sprake van overhangende vegetatie.
+Langs de oevers werden geen exotische soorten geobserveerd.
+Het landgebruik langs beide oevers was bos.
+
+## Locatie 7
+
+```{r location7, fig.cap = "De zevende locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
+
+# Load and auto-orient each image
+paths <- c(
+  "./media/hydromorfologie/kb7/20250618_102536.jpg",
+  "./media/hydromorfologie/kb7/20250618_102550.jpg",
+  "./media/hydromorfologie/kb7/20250618_102740.jpg",
+  "./media/hydromorfologie/kb7/20250618_102540.jpg"
+)
+
+images <- lapply(paths, function(p) {
+  img <- image_read(p)
+  image_orient(img)  # This is the correct function
+})
+
+# Display in two rows
+grid::grid.newpage()
+gridExtra::grid.arrange(grobs = lapply(images, grid::rasterGrob), nrow = 2)
+```
+
+Tijdens het veldwerk van 18/6/2025 werden geen uitzonderlijke weersomstandigheden genoteerd.
+De gemiddelde kraagbreedte, breedte t.h.v. het wateroppervlak en gemiddelde diepte bedroegen respectievelijk 0.9, 0.5 en 0.6 m.
+Er was geen breedtevariatie.
+Er was geen stromingsvariatie.
+Waterstroomsnelheid kon niet bepaald worden omdat het water te ondiep was.
+Waterdiepte was gemiddeld 0.02 m.
+Het bodemsubstraat was goed zichtbaar maar onnatuurlijk en bestond volledig uit beton.
+De riviersectie was volledig beschaduwd over de hele lengte.
+Van meandering, of stroomkuilen was geen sprake.
+Er waren geen eendenkroos of algen aanwezig.
+Waterplanten waren niet aanwezig.
+Fijn dood hout met een diameter onder de 30 cm was beperkt aanwezig.
+Er was geen erosie.
+Het profiel van de oever was volledig onnatuurlijk.
+De oevers waren verstevigd met een betonnen goot.
+Langs de oevers werden geen exotische soorten geobserveerd.
+Het landgebruik langs beide oevers was bos.
+
+## Locatie 8
+
+```{r location8, fig.cap = "De achtste locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
+
+# Load and auto-orient each image
+paths <- c(
+  "./media/hydromorfologie/kb8/20250618_103257.jpg",
+  "./media/hydromorfologie/kb8/20250618_103306.jpg",
+  "./media/hydromorfologie/kb8/20250618_103311.jpg",
+  "./media/hydromorfologie/kb8/20250618_103318.jpg"
+)
+
+images <- lapply(paths, function(p) {
+  img <- image_read(p)
+  image_orient(img)  # This is the correct function
+})
+
+# Display in two rows
+grid::grid.newpage()
+gridExtra::grid.arrange(grobs = lapply(images, grid::rasterGrob), nrow = 2)
+```
+
+Tijdens het veldwerk van 18/6/2025 werden geen uitzonderlijke weersomstandigheden genoteerd.
+De gemiddelde kraagbreedte, breedte t.h.v. het wateroppervlak en gemiddelde diepte bedroegen respectievelijk 2.4, 0.5 en 0.6 m.
+Er was een uitgesproken breedtevariatie met meer dan drie breedtes.
+Er was een beperkte stromingsvariatie.
+Waterstroomsnelheid en waterdiepte waren gemiddeld 0.142 m/s (gemeten op 0.02 m) en 0.04 m.
+Het bodemsubstraat was volledig zichtbaar en natuurlijk en bestond uit leem (50 %), grind (35 %), grof organisch materiaal (10 %) en zand (5 %).
+De riviersectie was volledig beschaduwd over de hele lengte.
+De beek vertoont uitgesproken meandering met 3 binnenbochten, 2 point bars, 2 mid-channel bars en 3 side bars.
+Er waren geen stroomkuilen.
+Er waren geen eendenkroos of algen aanwezig.
+Waterplanten waren niet aanwezig.
+Fijn dood hout van alle diameters was beperkt aanwezig.
+Er was zowel beperkte krommingserosie als breedte-erosie.
+Het profiel van de oever was volledig natuurlijk en vergelijkbaar langs beide oevers.
+Geleidelijk en niet vertrappeld (een niet verstevigde oever met een overwegend flauwe taludhelling) kwam het meeste voor, gevolgd door verticale en holle oevers die door erosie deels ondergraven waren en samengestelde oevers met complex, getrapt oeverprofiel.
+De oevers bestonden uit bomen en struiken en langs beiden zijn was er sprake van overhangende vegetatie.
+Langs de oevers werden geen exotische soorten geobserveerd.
+Het landgebruik langs beide oevers was bos.
 
