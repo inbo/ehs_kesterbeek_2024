@@ -10,8 +10,6 @@ Visvangsten dienen niet herhaald te worden om als baseline te fungeren maar een 
 Het elektrisch vissen en de verzameling van eDNA gebeurde op dezelfde dag en telkens in stroomopwaartse richting.
 Er werd altijd voor gezorgd dat de stalen van het elektrisch vissen altijd achterbleven op de eDNA stalen om mogelijke contaminatie van de eDNA stalen te voorkomen.
 
-Locaties elektrisch vissen:
-
 ```{r}
 coord<-read.csv('./data/locaties/extern/kb-vis.csv')
 

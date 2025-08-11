@@ -1,4 +1,4 @@
-# Resultaten abiotiek
+# Resultaten hydromorfologie
 
 ```{r}
 library(dplyr)
@@ -11,6 +11,8 @@ library(magick)
 ```{r}
 source("./source/functions/f.read_excel_allsheets.R")
 ```
+
+\newpage
 
 ## Locatie 1
 
@@ -55,6 +57,8 @@ Langs de oevers werden geen exotische soorten geobserveerd.
 Bomen waren afwezig.
 Het landgebruik bestond voor beide oevers volledig uit grasland.
 
+\newpage
+
 ## Locatie 2
 
 ```{r location2, fig.cap = "De tweede locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
@@ -97,6 +101,8 @@ De oevers bestonden voornamelijk uit struiken en bomen en langs beiden zijn was 
 Langs de oevers werden geen exotische soorten geobserveerd.
 Langs beide oevers waren meer dan 5 bomenrijen aanwezig.
 Het landgebruik bestond voor beide oevers volledig uit natuurlijk bos.
+
+\newpage
 
 ## Locatie 3
 
@@ -149,6 +155,8 @@ Langs de oevers werden geen exotische soorten geobserveerd.
 Langs beide oevers waren meer dan 5 bomenrijen aanwezig.
 Het landgebruik bestond voor beide oevers voornamelijk uit natuurlijk bos en beperkt ook door een verharde weg die zich over de sifon bevond.
 
+\newpage
+
 ## Locatie 4
 
 ```{r location4, fig.cap = "De vierde locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
@@ -192,6 +200,8 @@ Langs de oevers werden geen exotische soorten geobserveerd.
 Langs de helft van de sectie liep een onverhard pad.
 Het landgebruik bestond voor de linkeroever uit grasland en struiken (50%) en tuinen met bomen (50%) en voor de rechteroever uit grasland en struiken (50%) en onverhard pad (50%).
 
+\newpage
+
 ## Locatie 5
 
 ```{r location5, fig.cap = "De vijfde locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
@@ -232,6 +242,8 @@ De oevers waren niet-verstevigd, geleidelijk en niet vertrappeld.
 De oevers bestonden uit grassen, kruiden, struiken en bomen en langs beiden zijn was er sprake van overhangende vegetatie.
 Langs de oevers werden geen exotische soorten geobserveerd.
 Langs de de linkeroever liep een onverhard pad, terwijl de rechteroever tuinen betrof.
+
+\newpage
 
 ## Locatie 6
 
@@ -274,6 +286,8 @@ De oevers bestonden uit grassen, kruiden, struiken en bomen en langs beiden zijn
 Langs de oevers werden geen exotische soorten geobserveerd.
 Het landgebruik langs beide oevers was bos.
 
+\newpage
+
 ## Locatie 7
 
 ```{r location7, fig.cap = "De zevende locatie waar de hydromorfologie werd bepaald.", fig.align = "center", out.width = "96%", echo=FALSE, message=FALSE, warning=FALSE}
@@ -313,6 +327,8 @@ Het profiel van de oever was volledig onnatuurlijk.
 De oevers waren verstevigd met een betonnen goot.
 Langs de oevers werden geen exotische soorten geobserveerd.
 Het landgebruik langs beide oevers was bos.
+
+\newpage
 
 ## Locatie 8
 
@@ -354,3 +370,33 @@ Geleidelijk en niet vertrappeld (een niet verstevigde oever met een overwegend f
 De oevers bestonden uit bomen en struiken en langs beiden zijn was er sprake van overhangende vegetatie.
 Langs de oevers werden geen exotische soorten geobserveerd.
 Het landgebruik langs beide oevers was bos.
+
+\newpage
+
+# Resultaten connectiviteit
+
+Op hydrologisch vlak kunnen barrières de verplaatsing van deeltjes, het ondersteunen van biodiversiteit en het vasthouden van verontreinigende stoffen belemmeren.
+[@Tan2023_Influenc] en [@Hoess2022_Rolefish] stelden vast dat **visvijvers** kunnen bijdragen aan droogtemitigatie doordat ze de basisafvoer verhogen en piekafvoer verlagen.
+De effectiviteit hiervan kan echter worden ondermijnd door onoordeelkundig beheer, bijvoorbeeld wanneer water uit de beek wordt onttrokken om de vijver te vullen tijdens perioden van lage afvoer.
+Een casestudy van [@Olsson2001_Passageo] wees uit dat de migratie van forel door een vijver trager verliep en de overlevingskans lager was, mogelijk door predatie in de vijver.
+De tragere migratie werd toegeschreven aan lagere stroomsnelheden, waardoor het voor vissen moeilijker wordt de uitgang van de vijver te vinden.
+Windgedreven oppervlaktestroming kan deze effecten versterken.
+Het is waarschijnlijk dat deze negatieve effecten nog groter zijn bij soorten die niet gespecialiseerd zijn in migratie, zoals riviergrondel en bermpje.
+
+De **betonnen goten** belemmeren de longitudinale connectiviteit in de beek zelf niet, maar verminderen wel de connectiviteit tussen de beek en het grondwater, evenals de laterale connectiviteit tussen de beek en haar oevers.
+Figuur ?
+toont een dergelijke goot in de beek, waarbij duidelijk is dat de stroming volledig wordt ingesloten door de betonnen structuur.
+De invloed van de betonnen goot op migrerende vissen is minder eenduidig.
+Het water bovenstrooms in de goot is zeer ondiep, wat de zwemcapaciteit kan verminderen en kan leiden tot verminderde zuurstofopname wanneer de kieuwen niet volledig onder water zijn [@Franklin2018_Linkingec].
+Het is echter onwaarschijnlijk dat de goot zelf de oorzaak is van het ondiepe water, aangezien deze zich dicht bij de bron bevindt, waar de afvoer sowieso laag is.
+Wel verstoort de goot de habitatcontinuïteit, wat van belang is voor vismigratie [@Franklin2018_Linkingec].
+
+Veel van deze obstakels kunnen een negatieve invloed hebben op vismigratie.
+[@Kemp2010_Protocold] onderscheiden verschillende categorieën van passeerbaarheid: Een **totale barrière**, waarbij niets kan passeren; een **partiële barrière**, die door sommige vissoorten kan worden gepasseerd; en een **tijdelijke barrière**, die slechts een deel van het jaar migratie belemmert.
+Stuwen kunnen uiteenlopende effecten hebben op vispopulaties en migratie.
+Het water bovenstrooms van een stuw is doorgaans dieper en stroomt trager, wat gunstig kan zijn voor soorten die dergelijke omstandigheden prefereren [@Poulet2007_Impactweir].
+Tijdens droge perioden kunnen stuwen de connectiviteit verhogen door water vast te houden en zo een lokaal toevluchtsoord te bieden voor vissen.
+Onder normale omstandigheden beperken stuwen echter de habitatconnectiviteit, en tijdens hoge afvoeren vormen ze vaak grotere migratiebarrières [@Kim2025_Impactsof].
+
+Menselijke constructies veroorzaken vergelijkbare problemen.
+[@Ottburg2015_Handreiki] toonden aan dat duikers migratiebarrières kunnen vormen in drie situaties: wanneer de duiker **hangend** is (uitlaat boven het waterniveau), **ondergedimensioneerd** is waardoor zeer hoge stroomsnelheden ontstaan, of te klein is voor grotere vissen om te passeren.

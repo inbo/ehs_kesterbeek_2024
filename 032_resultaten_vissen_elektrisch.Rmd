@@ -4,7 +4,10 @@
 knitr::opts_chunk$set(message=FALSE, warning=FALSE)
 ```
 
-er werden weinig vissen gevangen.
+Op basis van de elektrobevisgegevens (Tabel \@ref(tab:overzichtstabelaantal)) blijkt dat het aantal vissoorten vergelijkbaar was op de drie meetlocaties waar vissen werden aangetroffen.
+**Rivergrondel** en **driedoornige stekelbaars** kwamen voor op alle drie deze locaties, wat overeenkomt met de resultaten van de eDNA-bemonstering.
+**Bermpje** werd uitsluitend waargenomen op de twee meest stroomafwaartse locaties, eveneens in overeenstemming met de eDNA-gegevens.
+**Blankvoorn** daarentegen werd enkel gevangen op de meest stroomopwaartse locatie (locatie 6).
 
 ```{r}
 library(dplyr)
