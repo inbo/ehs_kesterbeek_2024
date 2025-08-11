@@ -2,6 +2,31 @@
 
 Locaties knelpunten: [klik hier](https://www.google.com/maps/d/edit?mid=1P_5L6JCts-SyDYWms0wqWhxO8IqMXBY&usp=sharing)
 
+```{r}
+library(htmlwidgets)
+library(webshot)
+library(sp)
+library(leaflet)
+source("./source/functions/f.map.R")
+```
+
+Locaties hydromorfologie:
+
+```{r}
+coord<-read.csv('./data/abiotiek/locaties/extern/kb-hydromorf.csv')
+
+a<-f.map(data=coord,X="lon",Y="lat",crs="+init=epsg:4326",control.parameter="name",label.parameter="name",plot=TRUE)
+saveWidget(a, "./data/abiotiek/locaties//intern/zoomout.html", selfcontained = TRUE)
+webshot::webshot("./data/abiotiek/locaties//intern/zoomout.html", file = "./data/abiotiek/locaties//intern/zoomout.png", cliprect = "viewport")
+if (knitr::is_latex_output()) {
+  knitr::include_graphics("./data/abiotiek/locaties//intern/zoomout.png")
+} else {
+  a
+}
+```
+
+Locaties barrières visbeweging
+
 ## Verstuwingsgraad
 
 De keuze om stroomopwaarts of stroomafwaarts te beginnen is voor de opmeting van de verstuwingsgraad niet cruciaal en zal worden bepaald door de andere simultane opnames en logistiek.
