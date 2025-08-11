@@ -1,3 +1,27 @@
 # Methodologie elektrisch vissen
 
-Locaties elektrisch vissen: [klik hier](https://www.google.com/maps/d/edit?mid=1P_5L6JCts-SyDYWms0wqWhxO8IqMXBY&usp=sharing)
+Om de identificatie en beoordeling van vismigratieknelpunten te ondersteunen wordt aangeraden om gebruik te maken van visdata.
+Beschikbare visdata in de Kesterbeek is echter beperkt tot enkele vangsten van driedoornige en tiendoornige stekelbaars in 1997, 2002 en 2006 (<https://vis.inbo.be/>).
+Deze data is onvoldoende om te fungeren als baseline voor de PAS-herstelmaatregelen en specifiek om het effect ervan op de habitatrichtlijnsoorten (i.e. bittervoorn, rivierdonderpad en beekprik) te bepalen.
+Verzameling van visdata m.b.v. elektrisch vissen en eDNA om een inzicht te krijgen in de aanwezige soorten (en aantallen en biomassa in het geval van elektrisch vissen) werd daarom uitgevoerd.
+Visvangsten dienen niet herhaald te worden om als baseline te fungeren maar een adequate periode dient wel bepaald te worden voor een representatieve staalname van ten minste de beoogde soorten.
+5 afvissingen met elektrisch vissen over trajecten van 50 meter werden uitgevoerd.
+7 eDNA stalen werden verzamelt (5 locaties en 2 replicaten op de belangrijkste locaties).
+Het elektrisch vissen en de verzameling van eDNA gebeurde op dezelfde dag en telkens in stroomopwaartse richting.
+Er werd altijd voor gezorgd dat de stalen van het elektrisch vissen altijd achterbleven op de eDNA stalen om mogelijke contaminatie van de eDNA stalen te voorkomen.
+
+Locaties elektrisch vissen:
+
+```{r}
+coord<-read.csv('./data/locaties/extern/kb-vis.csv')
+
+a<-f.map(data=coord,X="X",Y="Y",crs="+init=epsg:4326",control.parameter="description",label.parameter="name",plot=TRUE)
+saveWidget(a, "./data/locaties//intern/vis.html", selfcontained = TRUE)
+webshot::webshot("./data/locaties//intern/vis.html", file = "./data/locaties//intern/vis.png", cliprect = "viewport")
+if (knitr::is_latex_output()) {
+  knitr::include_graphics("./data/locaties//intern/vis.png")
+} else {
+  a
+}
+remove(a)
+```
