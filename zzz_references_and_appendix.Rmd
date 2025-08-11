@@ -45,15 +45,6 @@ Ter hoogte van duidelijke situaties van hoog verval (\>20 cm) worden direct voor
 
 ### Vismigratieknelpunten
 
-Om de identificatie en beoordeling van vismigratieknelpunten te ondersteunen wordt aangeraden om gebruik te maken van visdata.
-Beschikbare visdata in de Kesterbeek is echter beperkt tot enkele vangsten van driedoornige en tiendoornige stekelbaars in 1997, 2002 en 2006 (<https://vis.inbo.be/>).
-Deze data is onvoldoende om te fungeren als baseline voor de PAS-herstelmaatregelen en specifiek om het effect ervan op de habitatrichtlijnsoorten (i.e. bittervoorn, rivierdonderpad en beekprik) te bepalen.
-Verzameling van visdata m.b.v. elektrisch vissen en eDNA om een inzicht te krijgen in de aanwezige soorten (en aantallen en biomassa in het geval van elektrisch vissen) wordt daarom uitgevoerd.
-Visvangsten dienen niet herhaald te worden om als baseline te fungeren maar een adequate periode dient wel bepaald te worden voor een representatieve staalname van ten minste de beoogde soorten.
-5 afvissingen met elektrisch vissen over trajecten van 50 meter worden uitgevoerd.
-7 eDNA stalen worden verzamelt (5 locaties en 2 replicaten op de belangrijkste locaties).
-Idealiter overlappen de elektrisch vissen trajecten en eDNA staalnamepunten met de trajecten waar de hydromorfologie wordt bepaald.
-
 \newpage
 
 |                       |                     |                             |
