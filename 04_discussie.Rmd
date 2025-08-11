@@ -1,0 +1,75 @@
+# Discussie
+
+## Connectiviteit
+
+Op hydrologisch vlak kunnen barrières de verplaatsing van deeltjes, het ondersteunen van biodiversiteit en het vasthouden van verontreinigende stoffen belemmeren.
+[@Tan2023_Influenc] en [@Hoess2022_Rolefish] stelden vast dat visvijvers kunnen bijdragen aan droogtemitigatie doordat ze de basisafvoer verhogen en piekafvoer verlagen.
+De effectiviteit hiervan kan echter worden ondermijnd door onoordeelkundig beheer, bijvoorbeeld wanneer water uit de beek wordt onttrokken om de vijver te vullen tijdens perioden van lage afvoer.
+Een casestudy van [@Olsson2001_Passageo] wees uit dat de migratie van forel door een vijver trager verliep en de overlevingskans lager was, mogelijk door predatie in de vijver.
+De tragere migratie werd toegeschreven aan lagere stroomsnelheden, waardoor het voor vissen moeilijker wordt de uitgang van de vijver te vinden.
+Windgedreven oppervlaktestroming kan deze effecten versterken.
+Het is waarschijnlijk dat deze negatieve effecten nog groter zijn bij soorten die niet gespecialiseerd zijn in migratie, zoals riviergrondel en bermpje.
+
+De betonnen goten belemmeren de longitudinale connectiviteit in de beek zelf niet, maar verminderen wel de connectiviteit tussen de beek en het grondwater, evenals de laterale connectiviteit tussen de beek en haar oevers.
+Figuur ?
+toont een dergelijke goot in de beek, waarbij duidelijk is dat de stroming volledig wordt ingesloten door de betonnen structuur.
+De invloed van de betonnen goot op migrerende vissen is minder eenduidig.
+Het water bovenstrooms in de goot is zeer ondiep, wat de zwemcapaciteit kan verminderen en kan leiden tot verminderde zuurstofopname wanneer de kieuwen niet volledig onder water zijn [@Franklin2018_Linkingec].
+Het is echter onwaarschijnlijk dat de goot zelf de oorzaak is van het ondiepe water, aangezien deze zich dicht bij de bron bevindt, waar de afvoer sowieso laag is.
+Wel verstoort de goot de habitatcontinuïteit, wat van belang is voor vismigratie [@Franklin2018_Linkingec].
+
+Veel van deze obstakels kunnen een negatieve invloed hebben op vismigratie.
+[@Kemp2010_Protocold] onderscheiden verschillende categorieën van passeerbaarheid: Een totale barrière, waarbij niets kan passeren; een partiële barrière, die door sommige vissoorten kan worden gepasseerd; en een tijdelijke barrière, die slechts een deel van het jaar migratie belemmert.
+Stuwen kunnen uiteenlopende effecten hebben op vispopulaties en migratie.
+Het water bovenstrooms van een stuw is doorgaans dieper en stroomt trager, wat gunstig kan zijn voor soorten die dergelijke omstandigheden prefereren [@Poulet2007_Impactweir].
+Tijdens droge perioden kunnen stuwen de connectiviteit verhogen door water vast te houden en zo een lokaal toevluchtsoord te bieden voor vissen.
+Onder normale omstandigheden beperken stuwen echter de habitatconnectiviteit, en tijdens hoge afvoeren vormen ze vaak grotere migratiebarrières [@Kim2025_Impactsof].
+
+Menselijke constructies veroorzaken vergelijkbare problemen.
+[@Ottburg2015_Handreiki] toonden aan dat duikers migratiebarrières kunnen vormen in drie situaties: wanneer de duiker hangend is (uitlaat boven het waterniveau), ondergedimensioneerd is waardoor zeer hoge stroomsnelheden ontstaan, of te klein is voor grotere vissen om te passeren.
+
+## Vissoorten en diversiteit
+
+**Heterogeniteit en microhabitats** worden in de literatuur aangemerkt als belangrijke kenmerken ter ondersteuning van beschermingswaardige vissoorten (Pike et al., 2020; Of & Crook, 2018; Barbel – *Barbus barbus*, z.d.; *Barbus barbus* Summary Page, z.d.; Britton & Pegg, 2011; Rivierdonderpad, z.d.; Ecopedia, z.d.; *Rivierdonderpad – Cottus perifretum – HABITAT – Spatial Analysis Tool – Deltares Public Wiki*, z.d.; Paelinckx et al., 2009; Bittervoorn, z.d.; Decleer, 2007).
+Uit de eerder beschreven eisen blijkt waarom dit zo is: deze soorten hebben specifieke habitatvereisten die variëren per seizoen, levensfase en activiteit.
+Stoffers et al. (2021) benadrukken daarbij het belang van microhabitats om de verschillende levensstadia van rheofiele vissoorten te ondersteunen.
+
+Voor veel beschermingswaardige soorten is bovendien migratiemogelijkheid cruciaal.
+Zo is de barbeel potamodroom en legt hij meerdere kilometers migratie af, terwijl de katadrome Europese aal verbindingen tussen zoet water en zee nodig heeft (Pike et al., 2020; Baudoin et al., 2015).
+Als onderdeel van het stroomgebied van de Schelde, heeft de Kesterbeek potentieel om migrerende vissoorten te ondersteunen, waaronder anadrome en katadrome soorten.
+
+Uit resultaten van het elektrovissen en eDNA-monsters, blijkt dat er in de Kesterbeek, Molenbeek en Zenne gezamenlijk 22 vissoorten voorkomen.
+Hiertoe behoren onder andere brasem (*Abramis brama*), alver (*Alburnus* sp.), Europese aal (*Anguilla anguilla*), bermpje (*Barbatula barbatula*), barbeel (*Barbus barbus*), goudvis/kroeskarper (*Carassius* sp.), rivierdonderpad (*Cottus perifretum*), karper (*Cyprinus carpio*), snoek (*Esox lucius*), driedoornige stekelbaars (*Gasterosteus aculeatus*), riviergrondel (*Gobio gobio*), pos (*Gymnocephalus cernua*), sneep (*Leuciscus leuciscus*), zwartbekgrondel (*Neogobius melanostomus*), baars (*Perca fluviatilis*), blauwband (*Pseudorasbora parva*), negenstekelige stekelbaars (*Pungitius pungitius*), bittervoorn (*Rhodeus amarus*), blankvoorn (*Rutilus rutilus*), ruisvoorn (*Scardinius erythrophthalmus*), kopvoorn (*Squalius cephalus*) en zeelt (*Tinca tinca*).
+
+Van deze soorten zijn er vijf aangewezen als beschermingswaardig.
+De barbeel en bittervoorn vallen onder Natura 2000 (Biodiversity Information System for Europe, 2025).
+Sneep/alver-achtigen vallen zowel onder Natura 2000 als de Europese Soortenrichtlijn (Biodiversity Information System for Europe, 2025; EUR-Lex, 2013).
+De rivierdonderpad is beschermd onder Natura 2000, vermeld in bijlage 1 van het Besluit van de Vlaamse Regering betreffende soortenbescherming en -beheer (categorie 2 en 4) en is opgenomen als SPP (Flemish Codex, 2024; Agentschap Natuur en Bos, 2025).
+De Europese aal is eveneens opgenomen in bijlage 1 van dit besluit en valt daarnaast onder de Europese Aalverordening (Flemish Codex, 2024; EUR-Lex, 2007).
+Twee invasieve soorten zijn vastgesteld: de blauwband, opgenomen op de Unielijst van invasieve uitheemse soorten (Life Riparias, 2023), en de goudvis/kroeskarper, vermoedelijk afkomstig uit particuliere bronnen.
+
+In de Kesterbeek zelf werd enkel de sneep/alver-groep aangetroffen als beschermingswaardige soort.
+De aanwezigheid van de overige vier soorten in de nabijgelegen Molenbeek en Zenne wijst erop dat de Kesterbeek mogelijk geschikt zou kunnen zijn, maar dat vismigratiebarrières en/of een gebrek aan geschikt habitat waarschijnlijk beperkende factoren zijn.
+
+De literatuur over de soorten die daadwerkelijk in de Kesterbeek zijn aangetroffen via elektrovissen — zoals bermpje, blankvoorn, blauwband, driedoornige stekelbaars en riviergrondel — laat zien dat dit over het algemeen generalisten zijn met een brede habitat-tolerantie.
+Zij kunnen zowel snelstromende als beschutte, stilstaande wateren benutten en verdragen uiteenlopende substraattypen zoals zand, modder of grind.
+Aquatische vegetatie wordt vaak benut voor eiafzet, maar is niet strikt noodzakelijk.
+
+In de Kesterbeek zijn dergelijke habitatcondities deels aanwezig: het substraat bestaat vooral uit klei en zand (INBO, 2025), terwijl zones met kunstmatige meanders vegetatie en trager stromend water bevatten, en meer open secties juist sneller stromend water hebben.
+De aanwezige soorten zijn meestal potamodroom of kunnen zowel anadroom als niet-anadroom zijn, wat wijst op een zekere flexibiliteit in migratiebehoeften.
+
+Beschermingswaardige soorten in de omgeving van de Kesterbeek hebben echter vaak specifiekere eisen.
+Zo verlangen rheofiele soorten zoals barbeel en rivierdonderpad helder, zuurstofrijk water met een afwisseling van snelstromende en traagstromende delen, terwijl de bittervoorn juist de voorkeur geeft aan rustig water en de aanwezigheid van zoetwatermosselen voor voortplanting.
+Sommige soorten hebben ook een voorkeur voor natuurlijke, vrij meanderende beektrajecten; hoewel de meanders stroomafwaarts in de Kesterbeek kunstmatig zijn, kunnen zij ecologisch een vergelijkbare functie vervullen.
+
+Een aantal bedreigingen kan verklaren waarom beschermingswaardige soorten in grote delen van de Kesterbeek ontbreken.
+Het gaat onder andere om fysieke aantasting van waterlichamen, migratiebarrières en rivierfragmentatie, die leiden tot veranderingen in het hydrologisch regime.
+Daarnaast zijn deze soorten gevoelig voor verontreiniging, waaronder nutriëntenverrijking en verhoogde troebelheid door landbouwactiviteiten en afspoeling.
+Gezien het intensieve landbouwgebruik in het omliggende landschap is dit waarschijnlijk ook hier een relevante bedreiging.
+
+Vergelijking van waterkwaliteitsmetingen met de tolerantiegrenzen van beschermingswaardige soorten laat zien dat de geleidbaarheid en nitraatconcentraties in de Kesterbeek mogelijk te hoog zijn voor sommige soorten, hoewel de pH-waarden binnen het toelaatbare bereik vallen.
+Voor de Europese aal lijken de huidige omstandigheden geschikter, mits migratiebarrières worden aangepakt.
+Voor soorten die nu aanwezig zijn, zoals bermpje en riviergrondel, kunnen de hoge hardheid en pH echter ecologische of fysiologische stress veroorzaken.
+
+Het wegnemen van barrières, verbeteren van habitatstructuur, verlagen van nutriëntenbelasting en herstellen van microhabitats kan het potentieel van de Kesterbeek als leef- en migratiegebied voor beschermingswaardige vissoorten aanzienlijk vergroten.
+Daarmee kan ook een bijdrage worden geleverd aan nationale en internationale natuurdoelstellingen.

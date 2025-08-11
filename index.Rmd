@@ -32,6 +32,48 @@ author:
     email: "simon.plaetinck@inbo.be"
     orcid: "0009-0002-5970-1517"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"  
+  - name:
+      given: "Julia"
+      family: "Boogaarts"
+    email: "?"
+    orcid: "?"
+    affiliation: "?"
+  - name:
+      given: "Delphine"
+      family: "Carroll"
+    email: "?"
+    orcid: "?"
+    affiliation: "?"
+  - name:
+      given: "Zihao"
+      family: "Chen"
+    email: "?"
+    orcid: "?"
+    affiliation: "?"
+  - name:
+      given: "Abe"
+      family: "Kienhuis"
+    email: "?"
+    orcid: "?"
+    affiliation: "?"
+  - name:
+      given: "Selma"
+      family: "Koper"
+    email: "?"
+    orcid: "?"
+    affiliation: "?"
+  - name:
+      given: "Albèrt"
+      family: "Pierik"
+    email: "?"
+    orcid: "?"
+    affiliation: "?"
+  - name:
+      given: "Melchim"
+      family: "Roothaert"
+    email: "?"
+    orcid: "?"
+    affiliation: "?"
 reviewer:
   - name:
       given: "Lore"
