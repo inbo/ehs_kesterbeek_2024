@@ -1,6 +1,8 @@
 # Methodologie abiotiek
 
-Locaties knelpunten: [klik hier](https://www.google.com/maps/d/edit?mid=1P_5L6JCts-SyDYWms0wqWhxO8IqMXBY&usp=sharing)
+Om een inzicht te krijgen in de hydromorfologie van de Kesterbeek werden op 17 en 18 juni 2025 acht transecten van 50 meter opgemeten.
+de transecten werden zo gekozen dat ze representatief waren voor het omliggende gebied.
+Om vergelijking doorheen de tijd en met andere gebieden mogelijk te maken werd uitgegaan van de HYDMO standaard van de Vlaamse Milieumaatschappij (VMM) [@vmm].
 
 ```{r}
 library(htmlwidgets)
@@ -8,39 +10,35 @@ library(webshot)
 library(sp)
 library(leaflet)
 source("./source/functions/f.map.R")
+source("./source/functions/f.read_excel_allsheets.R")
 ```
 
-Locaties hydromorfologie:
-
 ```{r}
-coord<-read.csv('./data/abiotiek/locaties/extern/kb-hydromorf.csv')
+coord<-read.csv('./data/locaties/extern/kb-hydromorf.csv')
 
 a<-f.map(data=coord,X="lon",Y="lat",crs="+init=epsg:4326",control.parameter="name",label.parameter="name",plot=TRUE)
-saveWidget(a, "./data/abiotiek/locaties//intern/zoomout.html", selfcontained = TRUE)
-webshot::webshot("./data/abiotiek/locaties//intern/zoomout.html", file = "./data/abiotiek/locaties//intern/zoomout.png", cliprect = "viewport")
+saveWidget(a, "./data/locaties//intern/hydromorf.html", selfcontained = TRUE)
+webshot::webshot("./data/locaties//intern/hydromorf.html", file = "./data/locaties//intern/hydromorf.png", cliprect = "viewport")
 if (knitr::is_latex_output()) {
-  knitr::include_graphics("./data/abiotiek/locaties//intern/zoomout.png")
+  knitr::include_graphics("./data/locaties//intern/hydromorf.png")
 } else {
   a
 }
+remove(a)
 ```
 
-Locaties barrières visbeweging
+Potentiële barrières voor visbeweging werden geïdentificeerd in het gebied en voorzien van beschrijving zoals verval en lengte in het geval van rescpectievelijk stuwen en sifons.
 
-## Verstuwingsgraad
+```{r}
+coord<-read.csv('./data/locaties/extern/kb-barrieres.csv')
 
-De keuze om stroomopwaarts of stroomafwaarts te beginnen is voor de opmeting van de verstuwingsgraad niet cruciaal en zal worden bepaald door de andere simultane opnames en logistiek.
-Om de 50 meter wordt m.b.v. de Trimble GPS met totaalstation de locatie (X, Y en Z) van het midden van de bodem bepaald.
-Voor elke van deze locaties wordt de waterdiepte genoteerd.
-Voor elk verhang groter dan 10 cm worden extra GPS coördinaten en waterdieptes verzamelt 0.5 meter voor en 0.5 meter na het verhang.
-Bovendien wordt het exacte verhang (op 0 meter) tussen de waterhoogtes gemeten en genoteerd.
-
-Benodigd materiaal:
-
--   Trimble en totaalstation
-
--   Peilstok
-
--   Invulformulier
-
--   Schrijfplank en potloden
+a<-f.map(data=coord,X="X",Y="Y",crs="+init=epsg:4326",control.parameter="description",label.parameter="name",plot=TRUE)
+saveWidget(a, "./data/locaties//intern/barrieres.html", selfcontained = TRUE)
+webshot::webshot("./data/locaties//intern/barrieres.html", file = "./data/locaties//intern/barrieres.png", cliprect = "viewport")
+if (knitr::is_latex_output()) {
+  knitr::include_graphics("./data/locaties//intern/barrieres.png")
+} else {
+  a
+}
+remove(a)
+```
