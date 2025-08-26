@@ -27,7 +27,7 @@ if (knitr::is_latex_output()) {
 remove(a)
 ```
 
-Potentiële barrières voor visbeweging werden geïdentificeerd in het gebied en voorzien van beschrijving zoals verval en lengte in het geval van rescpectievelijk stuwen en sifons.
+Potentiële barrières voor visbeweging werden geïdentificeerd in het gebied en voorzien van beschrijving zoals verval en lengte in het geval van respectievelijk stuwen en sifons.
 
 ```{r}
 coord<-read.csv('./data/locaties/extern/kb-barrieres.csv')
