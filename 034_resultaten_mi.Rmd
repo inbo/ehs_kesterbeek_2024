@@ -1,4 +1,4 @@
-# Resultaten elektrisch vissen
+# Resultaten macro-invertebraten
 
 ```{r}
 knitr::opts_chunk$set(message=FALSE, warning=FALSE)
@@ -8,3 +8,120 @@ knitr::opts_chunk$set(message=FALSE, warning=FALSE)
 source("./source/not_functions/libraries.R")
 ```
 
+```{r}
+mi<-f.read_excel_allsheets("./data/biotiek/mi/mmif.xls",skip=1)[[1]]
+mmif<-f.read_excel_allsheets("./data/biotiek/mi/mmif.xls",skip=1)[[2]][c(1:5),]
+colnames(mmif)=c("Sample","Date","Type","vTAX","vEPT","vNST","vSWD","vMTS","sTAX","sEPT","sNST","sSWD","sMTS","MMIF")
+```
+
+De MMIF was matig voor locaties 1 en 4 en ontoereikend voor locaties 2, 3 en 3b.
+Voor locatie 5 werd geen MMIF berekend omwille van de volgende redenen: Voor locatie 5 was de hoeveelheid water sterk beperkt wat het moeilijk maakte om een representatief staal te bekomen met het handnet.
+Daarnaast is de Kesterbeek t.h.v. locatie 5 eerder te klasseren als een bronbeek dan als een kleine beek.
+Omdat de MMIF-berekening typologie-gebonden is en een correctie voor bronbeken is de MMIF-berekening niet aangewezen.
+
+Tussen de E19 en de Lotsesteenweg (50,750646° - 4,284867°) werden in het verleden ook macro-invertebratenstalen genomen en MMIF-waarden berekend.
+In 1996, 2000 en 2014 waren deze MMIF waarden respectievelijk, ontoereikend (0.35), ontoereikend (0.30) en matig (0.55).
+Meer stroomopwaartse historische staalnames waren er niet.
+
+```{r}
+mmif %>% 
+  mutate(across(where(is.numeric), round, digits = 2)) %>%
+  kable(caption = "Tabel met de MMIF scores per locatie. De score is gebaseerd op de soortenrijkdom en de aanwezigheid van gevoelige soorten (EPT).", booktabs = TRUE)
+```
+
+```{r}
+mi <- mi[, colSums(is.na(mi)) < nrow(mi)]
+mi[is.na(mi)] <- 0
+write.csv(mi,"./data/mi.csv",row.names=FALSE)
+```
+
+```{r}
+soorten<-colnames(mi[,4:ncol(mi)])
+mi.mat<-f.transformatie(mi,"log")
+mi.dist=vegdist(mi.mat, method="bray",binary=FALSE,diag = TRUE)
+```
+
+```{r}
+groups <- mi$Sample
+bdisp <- betadisper(mi.dist, groups)
+efit <- vegan::envfit(bdisp, mi.mat, perm = 999)
+efit<-f.select.envfit(efit, 0.3)
+```
+
+As 1 (PCoA1): Verklaart 49.4% van de totale variatie.
+As 2 (PCoA2): Verklaart 31.0% van de totale variatie.
+Samen verklaren de eerste twee assen al 80.4% van de verschillen.
+Locaties 1 en 2 liggen samen en ook Locaties 3b en 4 liggen samen.
+Locatie 3 ligt tussen deze twee clusters maar locatie 5 ligt ver verwijdert van alle andere locaties.
+Het verschil in samenstelling tussen locaties 3b en 4 van de andere locaties wordt vooral bepaald door grote aantallen larven van *Hydropsychidae* (kokerjuffers), *Scirtidae* (moeraskevers) en *Simuliidae* (zwarte vliegen).
+Locaties 1 en 2 worden dan weer sterk onderscheiden door de aanwezigheid van larven van *Dixidae* (meniscusmuggen).
+Kenmerkend voor locatie 5 is de relatief grote hoeveelheid aan *Gammaridae* (vlokreeftjes).
+
+```{r mi-pcoa, fig.height=10, fig.width=10, fig.cap="Principale coördinaten analyse (PCOA, CPUE, vierde-machtswortel transformatie, Bray-Curtis afstanden) met weergave van de verschillende sites (als omkaderingen) en de belangrijkste soorten (weergave als pijlen met lengte pijlen representatief voor bijdrage; p>0.05 en R²>0.4) om verschillen in gemeenschapsstructuur te verklaren."}
+# 1. Install and Load Necessary Libraries
+# install.packages(c("ggplot2", "ggrepel"))
+library(ggplot2)
+library(ggrepel)
+
+# --- ASSUMED INPUTS ---
+# We assume 'bdisp' and the filtered 'efit' object are already defined 
+# by your preceding code (betadisper and f.select.envfit).
+
+# 2. Extract Data from the Ordination and Envfit Results
+# Extract sample scores (for the ordination background)
+sample_scores <- as.data.frame(scores(bdisp))
+sample_scores$Group <- bdisp$group
+
+# Extract the fitted vector/species data (the arrows and labels)
+efit_vectors <- as.data.frame(efit$vectors$arrows)
+efit_vectors$r2 <- efit$vectors$r
+efit_vectors$p_value <- efit$vectors$pvals
+efit_vectors$Species <- rownames(efit_vectors)
+
+# 3. Filter the Vectors
+# Filter for significant vectors (p < 0.05), matching your original plot command
+efit_vectors_filtered <- efit_vectors %>%
+  dplyr::filter(p_value < 0.1)
+
+# 4. Determine Scaling Factor for Arrows
+# The vectors must be scaled to fit visually with the sample points (scores)
+multiplier <- vegan::ordiArrowMul(efit) # Finds an optimal scaling factor from vegan
+multiplier=0.3
+
+# 5. Create the ggplot2 Plot
+ggplot(sample_scores, aes(x = sites.PCoA1, y = sites.PCoA2)) +
+  
+  # A. Plot the Ordination Points (Samples)
+  geom_point(aes(color = Group), size = 4) +
+  geom_text_repel(aes(label = rownames(sample_scores), color = Group), size = 4) +
+  
+  # B. Plot the Significant Envfit Arrows
+  geom_segment(
+    data = efit_vectors_filtered,
+    aes(x = 0, y = 0, xend = PCoA1 * multiplier, yend = PCoA2 * multiplier),
+    arrow = arrow(length = unit(0.2, "cm")),
+    color = "red",
+    alpha = 0.8
+  ) +
+  
+  # C. Plot the Species Labels with Repulsion (The Solution to Overlap)
+  geom_text_repel(
+    data = efit_vectors_filtered,
+    # Position the label slightly beyond the arrow tip
+    aes(x = PCoA1 * multiplier * 1.1, y = PCoA2 * multiplier * 1.1, label = Species),
+    color = "red",
+    size = 4.5,
+    segment.color = 'grey50', # Color of the line connecting the label to the arrow tip
+    min.segment.length = unit(0.1, "lines") # Prevents drawing segment lines for short movements
+  ) +
+  
+  # D. Add Reference Lines and Labels
+  geom_hline(yintercept = 0, linetype = "dashed", color = "grey") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey") +
+  labs(
+    title = "Envfit Vectors on Ordination Space (Non-Overlapping Labels)",
+    x = "Dim 1",
+    y = "Dim 2"
+  ) +
+  theme_minimal()
+```
