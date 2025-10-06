@@ -1,0 +1,10 @@
+# Resultaten elektrisch vissen
+
+```{r}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
+```{r}
+source("./source/not_functions/libraries.R")
+```
+

@@ -4,24 +4,14 @@
 knitr::opts_chunk$set(message=FALSE, warning=FALSE)
 ```
 
+```{r}
+source("./source/not_functions/libraries.R")
+```
+
 Op basis van de elektrobevisgegevens (Tabel \@ref(tab:overzichtstabelaantal)) blijkt dat het aantal vissoorten vergelijkbaar was op de drie meetlocaties waar vissen werden aangetroffen.
 **Rivergrondel** en **driedoornige stekelbaars** kwamen voor op alle drie deze locaties, wat overeenkomt met de resultaten van de eDNA-bemonstering.
 **Bermpje** werd uitsluitend waargenomen op de twee meest stroomafwaartse locaties, eveneens in overeenstemming met de eDNA-gegevens.
 **Blankvoorn** daarentegen werd enkel gevangen op de meest stroomopwaartse locatie (locatie 6).
-
-```{r}
-library(dplyr)
-library(simputation)
-library(tidyr)
-library(ggplot2)
-library(ggpubr)
-library(knitr)
-```
-
-```{r}
-source("./source/functions/f.read_excel_allsheets.R")
-source("./source/not_functions/add_missing_folders.R")
-```
 
 ```{r}
 theme.barplot <- theme_bw() + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1, size=15), axis.text.y = element_text(size=15), axis.title = element_text(size = 20), title = element_text(size = 30), strip.text = element_text(size=12), legend.title=element_blank())

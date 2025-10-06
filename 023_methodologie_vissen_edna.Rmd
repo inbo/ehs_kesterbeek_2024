@@ -1,12 +1,7 @@
 # Methodologie eDNA vissen
 
 ```{r}
-library(dplyr)
-library(simputation)
-library(tidyr)
-library(ggplot2)
-library(ggpubr)
-library(knitr)
+source("./source/not_functions/libraries.R")
 ```
 
 ## Staalname in het veld

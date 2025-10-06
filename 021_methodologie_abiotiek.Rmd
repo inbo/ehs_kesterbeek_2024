@@ -5,12 +5,7 @@ de transecten werden zo gekozen dat ze representatief waren voor het omliggende 
 Om vergelijking doorheen de tijd en met andere gebieden mogelijk te maken werd uitgegaan van de HYDMO standaard van de Vlaamse Milieumaatschappij (VMM) [@vmm].
 
 ```{r}
-library(htmlwidgets)
-library(webshot)
-library(sp)
-library(leaflet)
-source("./source/functions/f.map.R")
-source("./source/functions/f.read_excel_allsheets.R")
+source("./source/not_functions/libraries.R")
 ```
 
 ```{r}
